@@ -1,0 +1,47 @@
+{
+  "name": "@band-store/link-modules",
+  "version": "2.22.4",
+  "description": "Band Store Default Link Modules Package and Definitions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "AGENTS.md",
+    "!dist/**/__tests__",
+    "!dist/**/__mocks__",
+    "!dist/**/__fixtures__"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medusajs/medusa.git",
+    "directory": "packages/modules/link-modules"
+  },
+  "bugs": {
+    "url": "https://github.com/medusajs/medusa/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "author": "Medusa",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "watch": "yarn run -T tsc --build --watch",
+    "watch:test": "yarn run -T tsc --build tsconfig.spec.json --watch",
+    "prepare": "cross-env NODE_ENV=production yarn run build",
+    "resolve:aliases": "yarn run -T tsc --showConfig -p tsconfig.json > tsconfig.resolved.json && yarn run -T tsc-alias -p tsconfig.resolved.json && yarn run -T rimraf tsconfig.resolved.json",
+    "build": "yarn run -T rimraf dist && yarn run -T tsc --build && npm run resolve:aliases",
+    "test": "../../../node_modules/.bin/jest --passWithNoTests --bail --forceExit --testPathPatterns=src",
+    "test:integration": "../../../node_modules/.bin/jest --passWithNoTests --forceExit --testPathPatterns=\"integration-tests/__tests__/.*\\.ts\""
+  },
+  "devDependencies": {
+    "@band-store/framework": "2.22.4",
+    "@band-store/test-utils": "2.22.4",
+    "cross-env": "^10.1.0"
+  },
+  "peerDependencies": {
+    "@band-store/framework": "2.22.4"
+  }
+}

@@ -1,0 +1,1319 @@
+{
+	"schemaVersion": "2.0",
+	"id": 17555,
+	"name": "settings-models",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 17577,
+			"name": "LayoutConfiguration",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "layout-configuration.ts",
+					"line": 3,
+					"character": 13,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/layout-configuration.ts#L3"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 17578,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 17579,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the layout configuration."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "layout-configuration.ts",
+													"line": 5,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/layout-configuration.ts#L5"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17580,
+											"name": "zone",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The zone of the layout configuration"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "layout-configuration.ts",
+													"line": 6,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/layout-configuration.ts#L6"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17581,
+											"name": "user_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The user ID of the layout configuration"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "layout-configuration.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/layout-configuration.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17582,
+											"name": "is_system_default",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether the layout configuration is system default."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "layout-configuration.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/layout-configuration.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17583,
+											"name": "configuration",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The configuration of the layout."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "layout-configuration.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/layout-configuration.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												17579,
+												17580,
+												17581,
+												17582,
+												17583
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "layout_configuration"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 17570,
+			"name": "PropertyLabel",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "PropertyLabel stores custom display labels for entity properties.\nLabels are global (shared across all admin users) and provide\nconsistent terminology throughout the admin interface."
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "property-label.ts",
+					"line": 8,
+					"character": 13,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/property-label.ts#L8"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 17571,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 17572,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the property label."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "property-label.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/property-label.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17573,
+											"name": "entity",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The entity this label applies to (e.g., \"Order\", \"Product\")"
+													},
+													{
+														"kind": "text",
+														"text": "The entity of the property label"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "property-label.ts",
+													"line": 14,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/property-label.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17574,
+											"name": "property",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The property path (e.g., \"display_id\", \"customer.email\")"
+													},
+													{
+														"kind": "text",
+														"text": "The property of the property label"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "property-label.ts",
+													"line": 18,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/property-label.ts#L18"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17575,
+											"name": "label",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Custom display name for the property"
+													},
+													{
+														"kind": "text",
+														"text": "The label of the property label"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "property-label.ts",
+													"line": 22,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/property-label.ts#L22"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17576,
+											"name": "description",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Optional description providing context about the property"
+													},
+													{
+														"kind": "text",
+														"text": "The description of the property label"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "property-label.ts",
+													"line": 26,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/property-label.ts#L26"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												17572,
+												17573,
+												17574,
+												17575,
+												17576
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "property_label"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 17564,
+			"name": "UserPreference",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "user-preference.ts",
+					"line": 3,
+					"character": 13,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/user-preference.ts#L3"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 17565,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 17566,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the user preference."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user-preference.ts",
+													"line": 5,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/user-preference.ts#L5"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17567,
+											"name": "user_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The user id of the user preference"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user-preference.ts",
+													"line": 6,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/user-preference.ts#L6"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17568,
+											"name": "key",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The key of the user preference"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user-preference.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/user-preference.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17569,
+											"name": "value",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The value of the user preference"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user-preference.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/user-preference.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												17566,
+												17567,
+												17568,
+												17569
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "user_preference"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 17556,
+			"name": "ViewConfiguration",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "view-configuration.ts",
+					"line": 3,
+					"character": 13,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/view-configuration.ts#L3"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 17557,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 17558,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the view configuration."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "view-configuration.ts",
+													"line": 5,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/view-configuration.ts#L5"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17559,
+											"name": "entity",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The entity of the view configuration"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "view-configuration.ts",
+													"line": 6,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/view-configuration.ts#L6"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17560,
+											"name": "name",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The name of the view configuration"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "view-configuration.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/view-configuration.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17561,
+											"name": "user_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The user ID of the view configuration"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "view-configuration.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/view-configuration.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17562,
+											"name": "is_system_default",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether the view configuration is system default."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "view-configuration.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/view-configuration.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 17563,
+											"name": "configuration",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The configuration of the view configuration"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "view-configuration.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/settings/src/models/view-configuration.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												17558,
+												17559,
+												17560,
+												17561,
+												17562,
+												17563
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "view_configuration"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		}
+	],
+	"groups": [
+		{
+			"title": "Variables",
+			"children": [
+				17577,
+				17570,
+				17564,
+				17556
+			]
+		}
+	],
+	"packageName": "@band-store/settings",
+	"symbolIdMap": {
+		"17555": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/index.ts",
+			"qualifiedName": ""
+		},
+		"17556": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/view-configuration.ts",
+			"qualifiedName": "ViewConfiguration"
+		},
+		"17557": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/view-configuration.ts",
+			"qualifiedName": "__object"
+		},
+		"17558": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/view-configuration.ts",
+			"qualifiedName": "__object.id"
+		},
+		"17559": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/view-configuration.ts",
+			"qualifiedName": "__object.entity"
+		},
+		"17560": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/view-configuration.ts",
+			"qualifiedName": "__object.name"
+		},
+		"17561": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/view-configuration.ts",
+			"qualifiedName": "__object.user_id"
+		},
+		"17562": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/view-configuration.ts",
+			"qualifiedName": "__object.is_system_default"
+		},
+		"17563": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/view-configuration.ts",
+			"qualifiedName": "__object.configuration"
+		},
+		"17564": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/user-preference.ts",
+			"qualifiedName": "UserPreference"
+		},
+		"17565": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/user-preference.ts",
+			"qualifiedName": "__object"
+		},
+		"17566": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/user-preference.ts",
+			"qualifiedName": "__object.id"
+		},
+		"17567": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/user-preference.ts",
+			"qualifiedName": "__object.user_id"
+		},
+		"17568": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/user-preference.ts",
+			"qualifiedName": "__object.key"
+		},
+		"17569": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/user-preference.ts",
+			"qualifiedName": "__object.value"
+		},
+		"17570": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/property-label.ts",
+			"qualifiedName": "PropertyLabel"
+		},
+		"17571": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/property-label.ts",
+			"qualifiedName": "__object"
+		},
+		"17572": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/property-label.ts",
+			"qualifiedName": "__object.id"
+		},
+		"17573": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/property-label.ts",
+			"qualifiedName": "__object.entity"
+		},
+		"17574": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/property-label.ts",
+			"qualifiedName": "__object.property"
+		},
+		"17575": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/property-label.ts",
+			"qualifiedName": "__object.label"
+		},
+		"17576": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/property-label.ts",
+			"qualifiedName": "__object.description"
+		},
+		"17577": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/layout-configuration.ts",
+			"qualifiedName": "LayoutConfiguration"
+		},
+		"17578": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/layout-configuration.ts",
+			"qualifiedName": "__object"
+		},
+		"17579": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/layout-configuration.ts",
+			"qualifiedName": "__object.id"
+		},
+		"17580": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/layout-configuration.ts",
+			"qualifiedName": "__object.zone"
+		},
+		"17581": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/layout-configuration.ts",
+			"qualifiedName": "__object.user_id"
+		},
+		"17582": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/layout-configuration.ts",
+			"qualifiedName": "__object.is_system_default"
+		},
+		"17583": {
+			"packageName": "@band-store/settings",
+			"packagePath": "src/models/layout-configuration.ts",
+			"qualifiedName": "__object.configuration"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/modules/settings/src/models/index.ts"
+		},
+		"reflections": {
+			"1": 17555
+		}
+	}
+}

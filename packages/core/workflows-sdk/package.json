@@ -1,0 +1,49 @@
+{
+  "name": "@band-store/workflows-sdk",
+  "version": "2.22.4",
+  "description": "Set of workflows tooling for Band Store",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./composer": "./dist/utils/composer/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medusajs/medusa.git",
+    "directory": "packages/core/workflows-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/medusajs/medusa/issues"
+  },
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "AGENTS.md",
+    "!dist/**/__tests__",
+    "!dist/**/__mocks__",
+    "!dist/**/__fixtures__"
+  ],
+  "author": "Medusa",
+  "license": "MIT",
+  "devDependencies": {
+    "@band-store/types": "2.22.4"
+  },
+  "dependencies": {
+    "@band-store/deps": "2.22.4",
+    "@band-store/modules-sdk": "2.22.4",
+    "@band-store/orchestration": "2.22.4",
+    "@band-store/utils": "2.22.4",
+    "ulid": "^3.0.2"
+  },
+  "scripts": {
+    "build": "yarn run -T rimraf dist && yarn run -T tsc --build",
+    "watch": "yarn run -T tsc --build --watch",
+    "test": "../../../node_modules/.bin/jest --bail --forceExit --testPathPatterns=src",
+    "test:run": "node ./dist/utils/_playground.js"
+  }
+}

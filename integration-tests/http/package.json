@@ -1,0 +1,51 @@
+{
+  "name": "integration-tests-http",
+  "version": "1.1.31",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test:integration": "jest --no-cache --bail --detectOpenHandles --forceExit --logHeapUsage",
+    "test:integration:chunk": "jest --silent --no-cache --bail --forceExit",
+    "build": "yarn run -T tsc --allowJs --outDir ./dist"
+  },
+  "dependencies": {
+    "@band-store/api-key": "workspace:^",
+    "@band-store/auth": "workspace:*",
+    "@band-store/band-store": "workspace:*",
+    "@band-store/cache-inmemory": "workspace:*",
+    "@band-store/core-flows": "workspace:*",
+    "@band-store/customer": "workspace:^",
+    "@band-store/event-bus-local": "workspace:*",
+    "@band-store/event-bus-redis": "workspace:*",
+    "@band-store/framework": "workspace:*",
+    "@band-store/fulfillment": "workspace:^",
+    "@band-store/fulfillment-manual": "workspace:^",
+    "@band-store/inventory": "workspace:^",
+    "@band-store/loyalty-plugin": "workspace:^",
+    "@band-store/modules-sdk": "workspace:^",
+    "@band-store/pricing": "workspace:^",
+    "@band-store/product": "workspace:^",
+    "@band-store/promotion": "workspace:^",
+    "@band-store/region": "workspace:^",
+    "@band-store/stock-location": "workspace:^",
+    "@band-store/store": "workspace:^",
+    "@band-store/tax": "workspace:^",
+    "@band-store/test-utils": "workspace:*",
+    "@band-store/translation": "workspace:*",
+    "@band-store/user": "workspace:^",
+    "@band-store/utils": "workspace:^",
+    "@band-store/workflow-engine-inmemory": "workspace:*",
+    "form-data": "^4.0.4",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@band-store/types": "workspace:^",
+    "@swc/core": "^1.16.20",
+    "@swc/jest": "^0.2.36",
+    "jest": "^30.5.2",
+    "json-2-csv": "^5.6.0",
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
+  }
+}

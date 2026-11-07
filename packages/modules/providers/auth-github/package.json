@@ -1,0 +1,42 @@
+{
+  "name": "@band-store/auth-github",
+  "version": "2.22.4",
+  "description": "Github OAuth authentication provider for Band Store",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medusajs/medusa.git",
+    "directory": "packages/modules/providers/auth-github"
+  },
+  "bugs": {
+    "url": "https://github.com/medusajs/medusa/issues"
+  },
+  "files": [
+    "dist",
+    "AGENTS.md",
+    "!dist/**/__tests__",
+    "!dist/**/__mocks__",
+    "!dist/**/__fixtures__"
+  ],
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "author": "Medusa",
+  "license": "MIT",
+  "scripts": {
+    "test": "../../../../node_modules/.bin/jest --passWithNoTests src",
+    "test:integration": "../../../../node_modules/.bin/jest --passWithNoTests --forceExit --testPathPatterns=\"integration-tests/__tests__/.*\\.spec\\.ts\"",
+    "build": "yarn run -T rimraf dist && yarn run -T tsc --build",
+    "watch": "yarn run -T tsc --watch"
+  },
+  "devDependencies": {
+    "@band-store/framework": "2.22.4"
+  },
+  "peerDependencies": {
+    "@band-store/framework": "2.22.4"
+  },
+  "keywords": [
+    "band-store-provider",
+    "band-store-provider-auth-github"
+  ]
+}

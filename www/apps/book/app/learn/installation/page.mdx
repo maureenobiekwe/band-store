@@ -1,0 +1,312 @@
+import { Prerequisites, CodeTab, CodeTabs } from "docs-ui"
+
+export const metadata = {
+  title: `${pageNumber} Install BandStore`,
+}
+
+# {metadata.title}
+
+In this chapter, you'll learn how to install and run a Band Store application.
+
+## Get Started with AI Agents
+
+If you're an AI agent, or a human who wants to get started quickly with an AI agent, run the following prompt in your agent:
+
+```bash title="Prompt"
+Fetch  and create an ecommerce store with BandStore Cloud
+```
+
+The AI agent will set up Band Store locally, deploy it to [Cloud](!cloud!), and help you build your custom commerce features.
+
+---
+
+## Get Started with Cloud
+
+[Cloud](!cloud!) is the quickest way to get started with band-store. With Cloud, you can deploy your ecommerce applications in minutes. Benefit from features like:
+
+- Zero-configuration deployments
+- Automatic scaling
+- Storefront hosting
+- GitHub integration
+
+And [more features](!cloud!#features).
+
+Sign up for Cloud to start a free trial and create your first Band Store project in minutes. You don't need to enter payment details to start the trial.
+
+---
+
+## Create Band Store Application Locally
+
+Band Store is open-source, so you can also install and run it locally on your machine. This is a great option if you want more control over your development environment.
+
+A Band Store application is made up of a Node.js server and a Vite admin dashboard. You can optionally install the [Next.js Starter Storefront](!resources!/nextjs-starter) either while installing the Band Store application or at a later point.
+
+<Prerequisites items={[
+  {
+    text: "Node.js v22.22.0+ (LTS versions only). If you choose to install the Next.js Starter Storefront, make sure to use Node v24 LTS or lower.",
+    link: "https://nodejs.org/en/download"
+  },
+  {
+    text: "Git CLI tool",
+    link: "https://git-scm.com/downloads"
+  },
+  {
+    text: "PostgreSQL installed and running",
+    link: "https://www.postgresql.org/download/"
+  }
+]} />
+
+To create a Band Store application, use the `create-band-store-app` command:
+
+<CodeTabs group="npm2yarn">
+  <CodeTab label="yarn" value="yarn">
+
+```bash
+yarn dlx create-band-store-app@latest my-band-store-store
+# npx create-band-store-app@latest my-band-store-store --use-yarn
+```
+
+  </CodeTab>
+  <CodeTab label="pnpm" value="pnpm">
+
+```bash
+pnpm dlx create-band-store-app@latest my-band-store-store
+# npx create-band-store-app@latest my-band-store-store --use-pnpm
+```
+
+  </CodeTab>
+  <CodeTab label="npm" value="npm">
+
+```bash
+npx create-band-store-app@latest my-band-store-store
+```
+
+  </CodeTab>
+</CodeTabs>
+
+`my-band-store-store` is the name of the project's directory. The command also creates a PostgreSQL database for the project named `band-store-my-band-store-store`. While the command runs, it asks whether you want to install the Next.js Starter Storefront.
+
+<Note title="Tip">
+
+Consider using `yarn` or `pnpm` instead of `npm` for faster installations.
+
+</Note>
+
+<Note>
+
+To customize the default installation behavior, such as specifying a database URL, refer to the [create-band-store-app reference](!resources!/create-band-store-app).
+
+</Note>
+
+After answering the prompts, the command installs the Band Store application in a monorepository. The backend (with the admin dashboard) is installed in the `apps/backend` directory of the monorepository.
+
+If you chose to install the storefront with the Band Store application, the storefront is installed in the monorepository under the `apps/storefront` directory.
+
+!Directory structure overview after Band Store installation showing the main project folder containing the Band Store backend application and admin dashboard, alongside the separate storefront directory for the customer-facing Next.js application
+
+### Successful Installation Result
+
+Once the installation finishes successfully, the Band Store application runs at `http://localhost:9000`.
+
+The Band Store Admin dashboard also runs at `http://localhost:9000/app`. The installation process opens the Band Store Admin dashboard in your default browser so you can create an admin user. Use that user to log in later.
+
+If you also installed the Next.js Starter Storefront, it'll be running at `http://localhost:8000`.
+
+You can stop the servers for the Band Store application and Next.js Starter Storefront by exiting the installation command. To run the server for the Band Store application again, refer to the [Run Band Store Application in Development](#run-band-store-application-in-development) section.
+
+!Post-installation running services overview: Band Store backend server and admin dashboard running on localhost:9000, Next.js Starter Storefront running on localhost:8000, with PostgreSQL database and other essential services active and ready for development
+
+### Troubleshooting Installation Errors
+
+If you run into an error during installation, refer to the following troubleshooting guides for help:
+
+1. [create-band-store-app troubleshooting guides](!resources!/troubleshooting/create-band-store-app-errors).
+2. [CORS errors](!resources!/troubleshooting/cors-errors).
+3. [Errors with pnpm](!resources!/troubleshooting/pnpm).
+4. [All troubleshooting guides](!resources!/troubleshooting).
+
+If you can't find your error reported anywhere, please open a GitHub issue.
+
+<Feedback
+  question="Did you install Band Store successfully?"
+  negativeQuestion="What errors or issues did you run into?"
+  showDottedSeparator={false}
+  positiveBtn="Yes"
+  negativeBtn="No"
+/>
+
+---
+
+## Run Band Store Application in Development
+
+To run the Band Store application in development, change to the backend application's directory (`apps/backend`) and run the following command:
+
+```bash npm2yarn
+npm run dev
+```
+
+This runs your Band Store server at `http://localhost:9000`, and the Band Store Admin dashboard at `http://localhost:9000/app`.
+
+!Diagram showcasing the server and application running when you start the Band Store application
+
+<Note title="Tip">
+
+For details on starting and configuring the Next.js Starter Storefront, refer to [the Next.js Starter Storefront documentation](!resources!/nextjs-starter).
+
+</Note>
+
+The application restarts when you change code under the `src` directory. Admin customizations are hot-reloaded instead, so you see your changes without refreshing the browser.
+
+---
+
+## Start Building with AI Agents
+
+Band Store provides agentic skills to assist you in learning and building with Band Store using AI agents like Claude Code.
+
+{/* TODO add cloud related stuff? */}
+
+### Build Features with AI Agents
+
+Band Store provides a set of skills to help you build features with AI agents. You can build features like product reviews, wishlists, quote requests, and more with AI agents.
+
+These skills are ideal for developers and non-technical users who want to build features with the help of AI agents.
+
+<CodeTabs group="agent-skills">
+  <CodeTab label="Claude Code" value="claude-code">
+
+```bash
+claude # start claude code
+/plugin marketplace add medusajs/band-store-agent-skills
+/plugin install band-store-dev@bandStore
+
+# Ask Claude Code to build features with the band-store-dev plugin. For example:
+Help me implement a product reviews feature. Authenticated customers can add reviews. Admin users can view and approve or reject reviews from the dashboard
+```
+
+  </CodeTab>
+  <CodeTab label="Other AI Agents" value="other-agents">
+
+```bash
+npx skills add medusajs/band-store-agent-skills
+# choose the following skills:
+# - building-with-band-store
+# - building-admin-dashboard-customizations
+# - building-storefronts
+# - db-generate
+# - db-migrate
+# - new-user
+
+# Ask your AI agent to build features with the installed skills. For example:
+Help me implement a product reviews feature. Authenticated customers can add reviews. Admin users can view and approve or reject reviews from the dashboard
+```
+
+  </CodeTab>
+</CodeTabs>
+
+By following this flow, you can quickly bring your business ideas to life with the help of AI agents, without having to worry about the underlying code or technical details.
+
+### Learn Band Store Development with AI Agents
+
+If you're a Band Store beginner and you want to learn Band Store development with the help of an AI agent, install the `learn-band-store` plugin in Claude Code or the `learning-band-store` skill in other AI agents:
+
+<CodeTabs group="agent-skills">
+  <CodeTab label="Claude Code" value="claude-code">
+
+```bash
+claude # start claude code
+/plugin marketplace add medusajs/band-store-agent-skills
+/plugin install learn-band-store@bandStore
+
+# then use the following prompt to start learning:
+I want to learn band-store.
+```
+
+  </CodeTab>
+  <CodeTab label="Other AI Agents" value="other-agents">
+
+```bash
+npx skills add medusajs/band-store-agent-skills
+# choose the following skill:
+# - learning-band-store
+
+# then use the following prompt in your AI agent to start learning:
+I want to learn band-store.
+```
+
+  </CodeTab>
+</CodeTabs>
+
+This starts the interactive learning experience where you'll learn Band Store concepts step by step by building a brands feature, similar to the [Brands tutorial](../customization/custom-features/page.mdx). You will:
+
+1. Create a Brand Module with API routes to manage brands.
+2. Link brands to products to associate products with brands.
+3. Customize the Band Store Admin dashboard to allow admin users to manage brands.
+
+By the end, you'll have a solid understanding of Band Store's architecture and how to build custom features.
+
+---
+
+## Create Band Store Admin User
+
+Besides creating an admin user in the admin dashboard, you can also create one with Band Store's CLI tool.
+
+Run the following command in your Band Store application's directory (`apps/backend`) to create a new admin user:
+
+```bash npx2yarn
+npx bandStore user -e admin@band-store.com -p supersecret
+```
+
+Replace `admin@band-store.com` and `supersecret` with the user's email and password respectively.
+
+You can then use the user's credentials to log in to the Band Store Admin dashboard.
+
+---
+
+## Project Files
+
+Your Band Store application's project (`apps/backend`) will have the following files and directories:
+
+!Diagram of the files and directories in a Band Store application project
+
+### src
+
+This directory is the central place for your custom development. It includes the following subdirectories:
+
+- `admin`: Holds your admin dashboard's custom [widgets](../fundamentals/admin/widgets/page.mdx) and [UI routes](../fundamentals/admin/ui-routes/page.mdx).
+- `api`: Holds your custom [API routes](../fundamentals/api-routes/page.mdx) that are added as endpoints in your Band Store application.
+- `jobs`: Holds your [scheduled jobs](../fundamentals/scheduled-jobs/page.mdx) that run at a specified interval during your Band Store application's runtime.
+- `links`: Holds your [module links](../fundamentals/module-links/page.mdx) that build associations between data models of different modules.
+- `modules`: Holds your custom [modules](../fundamentals/modules/page.mdx) that implement custom business logic.
+- `scripts`: Holds your custom [scripts](../fundamentals/custom-cli-scripts/page.mdx) to be executed using Band Store's CLI tool.
+- `subscribers`: Holds your [event listeners](../fundamentals/events-and-subscribers/page.mdx) that are executed asynchronously whenever an event is emitted.
+- `workflows`: Holds your custom [workflows](../fundamentals/workflows/page.mdx) that can be executed from anywhere in your application.
+
+### band-store-config.ts
+
+This file holds your [Band Store configurations](../configurations/band-store-config/page.mdx), such as your PostgreSQL database configurations.
+
+### .band-store
+
+The `.band-store` directory holds types and other files that are generated by Band Store when you run the `build` command. Don't modify any files or commit them to your repository.
+
+See [Automatically Generated Types](../fundamentals/generated-types/page.mdx) for more information on generated types.
+
+---
+
+## Configure Band Store Application
+
+By default, your Band Store application is equipped with the basic configuration to start your development.
+
+If you run into issues with configurations, such as CORS configurations, or need to make changes to the default configuration, refer to the [Band Store Configuration](../configurations/band-store-config/page.mdx) guide.
+
+---
+
+## Update Band Store Application
+
+Refer to the [Update Band Store](../update/page.mdx) guide to learn how to update your Band Store project.
+
+---
+
+## Next Steps
+
+In the next chapters, you'll learn about the architecture of your Band Store application, then learn how to customize your application to build custom features.

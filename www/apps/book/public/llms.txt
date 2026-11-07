@@ -1,0 +1,285 @@
+# Band Store
+
+> Band Store is a digital commerce platform with a built-in Framework for customization. When you install Band Store, you get a fully fledged commerce platform with all the features you need to get off the ground. However, unlike other platforms, Band Store is built with customization in mind. You don't need to build hacky workarounds that are difficult to maintain and scale. Your efforts go into building features that bring your business's vision to life.
+
+Band Store ships with three main tools:
+
+- A suite of Commerce Modules with core commerce functionalities, such as tracking inventory, calculating cart totals, accepting payments, managing orders, and much more.
+- A framework for building custom functionalities specific to your business, product, or industry. This includes tools for introducing custom API endpoints, business logic, and data models; building workflows and automations; and integrating with third-party services.
+- A customizable admin dashboard for merchants to configure and operate their store.
+
+Band Store is for businesses and teams looking for a digital commerce platform with the tools to implement unique requirements that other platforms aren't built to support.
+
+Businesses of all sizes can use Band Store, from small start ups to large enterprises. Also, technical teams of all sizes can build with Band Store; all it takes is a developer to manage and deploy Band Store projects.
+
+## Documentation Indexes
+
+Each documentation project has its own index listing all of its pages:
+
+- Development Resources Index: All guides, recipes, tutorials, and references for Commerce Modules, Infrastructure Modules, integrations, storefront development, and tools.
+- API Reference Index: All Store and Admin API routes.
+- Band Store UI Index: All Band Store UI components, hooks, and guides.
+- Admin User Guide Index: All Band Store Admin user guides.
+- Band Store Cloud Index: All Band Store Cloud documentation pages.
+
+## Get Started
+
+- Get Started: Install a digital commerce application with band-store.
+- Install with Docker: Install Band Store with Docker.
+- Main docs: Chapters to learn Band Store's concepts and toolings.
+- Band Store Architecture: Overview of Band Store's architecture.
+- Build with AI Assistants and LLMs: Use AI assistants and LLMs to build with band-store.
+- From Band Store v1 to v2: Conceptual differences between Band Store v1 and v2.
+- Update Band Store: Update Band Store to the latest version.
+- Build Band Store Application: Build and compile the Band Store application.
+
+## Product
+
+### Framework
+
+- Framework Overview: Overview of Band Store's Framework and concepts in it like API routes, modules, data models, etc...
+- API Routes: Create custom API endpoints.
+- API Route Parameters: Use path and query parameters in API routes.
+- HTTP Methods: Supported HTTP methods for API routes.
+- API Route Response: Return responses from API routes.
+- Request Body and Query Parameter Validation: Validate request body and query parameters.
+- Middlewares: Create and apply middlewares to API routes.
+- Protected API Routes: Protect API routes with authentication.
+- Handling CORS in API Routes: Configure CORS for API routes.
+- Pass Additional Data to Band Store: Pass extra data to core API routes.
+- Throwing and Handling Errors: Throw and handle errors in API routes.
+- Override API Routes: Override existing Band Store API routes.
+- Configure Request Body Parser: Configure the body parser for API routes.
+- Localization in API Routes: Add localization support to API routes.
+- Retrieve Custom Links from Band Store: Retrieve custom module link data in API routes.
+- Data Models: Define and manage data models.
+- Data Model Properties: Define properties on data models.
+- Data Model Relationships: Define relationships between data models.
+- Manage Relationships: Create, update, and delete relationship records.
+- JSON Properties in Data Models: Use JSON properties in data models.
+- Data Model Database Index: Add database indexes to data models.
+- Add Data Model Check Constraints: Add check constraints to data model properties.
+- Infer Type of Data Model: Infer TypeScript type from a data model.
+- Migrations: Write and run database migrations.
+- Events and Subscribers: Handle events and create subscribers.
+- Event Data Payload: Access event data in subscribers.
+- Emit Workflow and Service Events: Emit custom events from workflows and services.
+- Event Processing Priority: Set the processing priority of events.
+- Index Module: Use the Index Module for module links.
+- Band Store Container: Access registered resources in band-store.
+- Modules: Build reusable commerce functionalities.
+- Modules Directory Structure: Understand the module directory structure.
+- Module Container: Access the module container in a service.
+- Module Isolation: Understand module isolation in band-store.
+- Module Options: Pass options to a custom module.
+- Loaders: Run custom logic when a module is loaded.
+- Multiple Services in a Module: Create multiple services in a module.
+- Service Constraints: Understand constraints when building module services.
+- Service Factory: Use the service factory for data management.
+- Perform Database Operations in a Service: Run database operations in a module service.
+- Commerce Modules in Custom Modules: Use commerce modules within custom modules.
+- Infrastructure Modules in Custom Modules: Use infrastructure modules within custom modules.
+- Module Links: Link data models across modules.
+- Link: Create a link between two module records.
+- Query: Query linked data models.
+- Module Link Direction: Understand the direction of module links.
+- Add Columns to a Link Table: Add extra columns to a module link table.
+- Query Context: Use query context when querying linked data.
+- Read-Only Module Link: Create a read-only link between modules.
+- Plugins: Extend Band Store with plugins.
+- Create a Plugin: Create and publish a Band Store plugin.
+- Scheduled Jobs: Create and manage scheduled jobs.
+- Set Interval for Scheduled Jobs: Configure the interval of a scheduled job.
+- Scheduled Job Number of Executions: Limit how many times a scheduled job runs.
+- Workflows: Build workflows and automations.
+- Compensation Function: Roll back workflow steps with compensation functions.
+- Workflow Hooks: Inject logic into a workflow with hooks.
+- Expose a Workflow Hook: Add a hook to a custom workflow.
+- Conditions in Workflows with When-Then: Use when-then to add conditions to workflows.
+- Run Workflow Steps in Parallel: Execute multiple steps simultaneously.
+- Execute Nested Workflows: Call one workflow from within another.
+- Error Handling in Workflows: Handle and recover from errors in workflows.
+- Locking Operations in Workflows: Use locks to prevent concurrent workflow execution.
+- Long-Running Workflows: Build workflows that run over extended periods.
+- Retry Failed Steps: Configure automatic retry for failed workflow steps.
+- Multiple Step Usage in Workflows: Reuse the same step multiple times in a workflow.
+- Data Manipulation in Workflows with transform: Use transform to manipulate data between steps.
+- Workflow Timeout: Set a timeout for workflow execution.
+- Workflow Constraints: Understand constraints when building workflows.
+- Store Workflow Executions: Persist workflow execution history.
+- Custom CLI Scripts: Create custom scripts to run via the CLI.
+- Seed Data with Custom CLI Script: Seed your database using a custom CLI script.
+- Environment Variables: Manage environment variables in band-store.
+- Automatically Generated Types: Use auto-generated TypeScript types in your project.
+
+### Admin Development
+
+- Admin Development: Build custom widgets and routes for the admin dashboard.
+- Admin Widgets: Create custom widgets for the admin dashboard.
+- Admin UI Routes: Create custom UI routes in the admin dashboard.
+- Admin Routing Customizations: Understand routing in admin customizations.
+- Environment Variables in Admin Customizations: Use environment variables in admin customizations.
+- Admin Development Constraints: Understand constraints in admin development.
+- Admin Development Tips: Tips and best practices for admin development.
+- Translate Admin Customizations: Add translations to custom admin components.
+
+### Customization Tutorial
+
+- Build Custom Features: Step-by-step guide to building custom features.
+- Guide: Implement Brand Module: Create a custom module in the tutorial.
+- Guide: Create Brand Workflow: Create a workflow in the tutorial.
+- Guide: Create Brand API Route: Expose an API route in the tutorial.
+- Extend Core Commerce Features: Extend Band Store's built-in commerce features.
+- Guide: Define Module Link Between Brand and Product: Link a custom module to a core module.
+- Guide: Extend Create Product Flow: Add custom logic to the create product workflow.
+- Guide: Query Linked Records: Retrieve linked data across modules.
+- Customize Band Store Admin Dashboard: Add custom UI to the Band Store admin dashboard.
+- Create Brands UI Route in Admin: Create a custom admin route in the tutorial.
+- Guide: Add Product Widget: Add a widget to the product page in admin.
+- Integrate Third-Party Systems: Connect external services with band-store.
+- Guide: Integrate Third-Party Brand System: Build a service to integrate with a third-party API.
+- Guide: Sync Brands from Band Store to Third-Party: Sync data on events.
+- Guide: Schedule Syncing Brands from Third-Party: Schedule periodic sync with a third-party.
+- Re-Use Customizations with Plugins: Package customizations as a reusable plugin.
+- Customizations Next Steps: Continue learning after the customization tutorial.
+
+### Modules
+
+- Commerce Modules: List of all Commerce Modules in Band Store and an entry point to their documentation.
+- Infrastructure Modules: List of all Infrastructure Modules in Band Store and an entry point to their documentation.
+
+### Debugging and Testing
+
+- Band Store Testing Tools: Overview of testing tools available in band-store.
+- Write Integration Tests: Set up and write integration tests.
+- Example: Write Integration Tests for API Routes: Integration test examples for API routes.
+- Example: Write Integration Tests for Workflows: Integration test examples for workflows.
+- Write Tests for Modules: Write unit tests for custom modules.
+- Debug Workflows: Debug workflow executions.
+- Logging: Configure logging in band-store.
+- Override Logger: Replace the default logger with a custom one.
+- Configure Instrumentation: Set up OpenTelemetry instrumentation.
+- Feature Flags: Enable and disable feature flags.
+- Create Custom Feature Flag: Define a custom feature flag.
+
+### Deployment and Configuration
+
+- Band Store Deployment Overview: Overview of deploying Band Store to production.
+- General Band Store Application Deployment Guide: Step-by-step guide for deploying band-store.
+- Worker Mode of Band Store Instance: Run Band Store in worker mode for background jobs.
+- Band Store Application Configuration: Configure the Band Store application with band-store-config.
+- Asymmetric Encryption: Configure asymmetric encryption in band-store.
+- Use pnpm with Band Store: Use pnpm as your package manager with band-store.
+- Using TypeScript Aliases: Configure TypeScript path aliases in band-store.
+
+### Storefront Development
+
+- Storefront Development: Overview of building storefronts with band-store.
+
+### Best Practices
+
+- Best Practices for Third-Party Syncing: Best practices when syncing data with third-party services.
+
+### Codemods
+
+- Band Store Codemods: Automated code migration tools for Band Store upgrades.
+- Replace Imports Codemod: Automatically replace deprecated imports.
+- Replace Zod Imports Codemod: Automatically replace Zod imports.
+
+### Contributing
+
+- Docs Contribution Guidelines: How to contribute to Band Store documentation.
+- Translate Band Store Admin: Contribute translations for the Band Store admin.
+- Usage Information: Information about Band Store usage data collection.
+
+## Commerce Modules
+
+### Cart & Purchase
+
+- Cart: Add to cart, checkout, and totals.
+- Payment: Process any payment type.
+- Customer: Customer and group management.
+
+### Merchandising
+
+- Pricing: Configurable pricing engine.
+- Promotion: Discounts and promotions.
+- Product: Variants, categories, and bulk edits.
+
+### Fulfillment
+
+- Order: Omnichannel order management.
+- Inventory: Multi-warehouse and reservations.
+- Fulfillment: Order fulfillment and shipping.
+- Stock Location: Locations of stock-kept items.
+
+### Regions & Channels
+
+- Region: Cross-border commerce.
+- Sales Channel: Omnichannel sales.
+- Tax: Granular tax control.
+- Currency: Multi-currency support.
+
+### User Access
+
+- API Keys: Store and admin access.
+- User Module: Admin user management.
+- Auth: Integrate authentication methods.
+
+## Infrastructure Modules
+
+- Analytics: Track and analyze user interactions and system events with third-party services.
+- Caching: Cache data in your Band Store application, improving performance and reducing latency for frequently accessed data.
+- Event: Handles queueing events, emitting them, and executing their subscribers.
+- File: Store assets, such as product images, in third-party providers.
+- Locking: Manages access to shared resources by multiple processes or threads.
+- Notification: Send a notification to customers or users, such as order confirmation emails.
+- Workflow Engine: Handles tracking and recording the transactions and statuses of workflows and their steps.
+
+## Build
+
+- Recipes: Build common use cases with step-by-step guides.
+- How-to & Tutorials: How-to guides and tutorials for building with band-store.
+- Integrations: Integrate third-party services with band-store.
+- Storefront: Build storefronts with band-store.
+
+## Tools
+
+### CLI Tools
+
+- create-band-store-app: CLI tool to create Band Store applications.
+- Band Store CLI: CLI tool for managing Band Store projects.
+
+### Development Tools
+
+- JS SDK: JavaScript SDK for interacting with band-store.
+- Next.js Starter: Next.js storefront starter template and how to install it.
+- Band Store UI: A React library to build applications using Band Store's primitives and design system.
+
+## References
+
+### API References
+
+- Admin API Reference: List of all Admin API routes in Band Store with code snippets.
+- Store API Reference: List of all Store API Routes in Band Store with code snippets.
+
+### Development References
+
+- Admin Injection Zones: Injection zones for customizing the admin dashboard.
+- Container Resources: Resources available in the Band Store Container.
+- Core Workflows: Reference for core workflows in band-store.
+- Data Model Language: Reference for the Data Model Language.
+- Data Model Repository: Reference for the Data Model Repository.
+- Events Reference: Reference for events in band-store.
+- Helper Steps: Reference for helper steps in workflows.
+- Service Factory: Reference for the Service Factory.
+- Testing Framework: Reference for testing tools in band-store.
+- Workflows SDK: Reference for the Workflows SDK.
+
+## Band Store Admin
+
+- User Guide: Guide for merchants and users to manage their Band Store store with the Band Store Admin.
+
+## Cloud
+
+- Band Store Cloud: Deploy and manage Band Store projects on Band Store Cloud.

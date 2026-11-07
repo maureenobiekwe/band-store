@@ -1,0 +1,460 @@
+{
+	"schemaVersion": "2.0",
+	"id": 66509,
+	"name": "cache",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 66510,
+			"name": "ICacheService",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 66511,
+					"name": "get",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "service.ts",
+							"line": 11,
+							"character": 2,
+							"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/cache/service.ts#L11"
+						}
+					],
+					"signatures": [
+						{
+							"id": 66512,
+							"name": "get",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This method retrieves data from the cache."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The item that was stored in the cache. If the item was not found, null is returned."
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nconst data = await cacheModuleService.get(\"my-key\")\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "service.ts",
+									"line": 11,
+									"character": 2,
+									"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/cache/service.ts#L11"
+								}
+							],
+							"typeParameters": [
+								{
+									"id": 66513,
+									"name": "T",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 66514,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The key of the item to retrieve."
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"target": 66513,
+												"name": "T",
+												"package": "@band-store/types",
+												"refersToTypeParameter": true
+											},
+											{
+												"type": "literal",
+												"value": null
+											}
+										]
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 66515,
+					"name": "set",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "service.ts",
+							"line": 22,
+							"character": 2,
+							"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/cache/service.ts#L22"
+						}
+					],
+					"signatures": [
+						{
+							"id": 66516,
+							"name": "set",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This method stores data in the cache."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nawait cacheModuleService.set(\"my-key\", { product_id: \"prod_123\" }, 60)\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "service.ts",
+									"line": 22,
+									"character": 2,
+									"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/cache/service.ts#L22"
+								}
+							],
+							"parameters": [
+								{
+									"id": 66517,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The key of the item to store."
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 66518,
+									"name": "data",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The data to store in the cache."
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								},
+								{
+									"id": 66519,
+									"name": "ttl",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The time-to-live (TTL) value in seconds. If not provided, the default TTL value is used. The default value is based on the used Cache Module."
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 66520,
+					"name": "invalidate",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "service.ts",
+							"line": 31,
+							"character": 2,
+							"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/cache/service.ts#L31"
+						}
+					],
+					"signatures": [
+						{
+							"id": 66521,
+							"name": "invalidate",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This method removes an item from the cache."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nawait cacheModuleService.invalidate(\"my-key\")\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "service.ts",
+									"line": 31,
+									"character": 2,
+									"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/cache/service.ts#L31"
+								}
+							],
+							"parameters": [
+								{
+									"id": 66522,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The key of the item to remove."
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						66511,
+						66515,
+						66520
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "service.ts",
+					"line": 1,
+					"character": 17,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/cache/service.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Interfaces",
+			"children": [
+				66510
+			]
+		}
+	],
+	"packageName": "@band-store/types",
+	"symbolIdMap": {
+		"66509": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": ""
+		},
+		"66510": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "ICacheService"
+		},
+		"66511": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "ICacheService.get"
+		},
+		"66512": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "ICacheService.get"
+		},
+		"66513": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "T"
+		},
+		"66514": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "key"
+		},
+		"66515": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "ICacheService.set"
+		},
+		"66516": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "ICacheService.set"
+		},
+		"66517": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "key"
+		},
+		"66518": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "data"
+		},
+		"66519": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "ttl"
+		},
+		"66520": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "ICacheService.invalidate"
+		},
+		"66521": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "ICacheService.invalidate"
+		},
+		"66522": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/cache/service.ts",
+			"qualifiedName": "key"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/core/types/src/cache/service.ts"
+		},
+		"reflections": {
+			"1": 66509
+		}
+	}
+}

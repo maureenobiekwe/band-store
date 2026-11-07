@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "envMode": "loose",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["!node_modules/**", "!src/**", "*/**", ".band-store/**"]
+    },
+    "build:plugin": {
+      "dependsOn": ["^build", "@band-store/band-store#build"],
+      "outputs": ["!node_modules/**", "!src/**", ".band-store/**"]
+    },
+    "test": {
+      "outputs": []
+    },
+    "test:integration": {
+      "outputs": []
+    },
+    "test:integration:chunk": {
+      "outputs": []
+    }
+  },
+  "globalDependencies": ["turbo.json"]
+}

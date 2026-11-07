@@ -1,0 +1,118 @@
+{
+  "name": "@band-store/draft-order",
+  "version": "2.22.4",
+  "description": "A draft order plugin for band-store.",
+  "author": "band-store ()",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/band-storejs/band-store.git",
+    "directory": "packages/plugins/draft-order"
+  },
+  "bugs": {
+    "url": "https://github.com/band-storejs/band-store/issues"
+  },
+  "files": [
+    ".band-store/server",
+    "AGENTS.md"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./workflows": "./.band-store/server/src/workflows/index.js",
+    "./.band-store/server/src/modules/*": "./.band-store/server/src/modules/*/index.js",
+    "./modules/*": "./.band-store/server/src/modules/*/index.js",
+    "./providers/*": "./.band-store/server/src/providers/*/index.js",
+    "./*": "./.band-store/server/src/*.js",
+    "./admin": {
+      "import": "./.band-store/server/src/admin/index.mjs",
+      "require": "./.band-store/server/src/admin/index.js",
+      "default": "./.band-store/server/src/admin/index.js"
+    }
+  },
+  "keywords": [
+    "Band Store",
+    "plugin",
+    "band-store-plugin-other",
+    "band-store-plugin",
+    "band-store-v2"
+  ],
+  "scripts": {
+    "build:plugin": "Band Store plugin:build",
+    "dev": "Band Store plugin:develop",
+    "prepare": "cross-env NODE_ENV=production yarn run build:plugin",
+    "link:watch": "Band Store plugin:publish && Band Store plugin:develop",
+    "watch": "Band Store plugin:develop"
+  },
+  "dependencies": {
+    "@ariakit/react": "^0.4.15",
+    "@babel/runtime": "^8.0.10",
+    "@band-store/js-sdk": "2.22.4",
+    "@hookform/resolvers": "6.0.0",
+    "@tanstack/react-query": "5.64.2",
+    "@uiw/react-json-view": "^2.0.0-alpha.17",
+    "date-fns": "^4.4.0",
+    "dequal": "^2.0.3",
+    "lodash.debounce": "^4.0.8",
+    "match-sorter": "^8.3.0",
+    "radix-ui": "1.1.2",
+    "react-hook-form": "7.83.0",
+    "zod": "4.6.6"
+  },
+  "devDependencies": {
+    "@band-store/admin-sdk": "2.22.4",
+    "@band-store/cli": "2.22.4",
+    "@band-store/dashboard": "2.22.4",
+    "@band-store/framework": "2.22.4",
+    "@band-store/icons": "2.22.4",
+    "@band-store/test-utils": "2.22.4",
+    "@band-store/types": "2.22.4",
+    "@band-store/ui": "4.2.11",
+    "@band-store/ui-preset": "2.22.4",
+    "cross-env": "^10.1.0"
+  },
+  "peerDependencies": {
+    "@band-store/admin-sdk": "2.22.4",
+    "@band-store/cli": "2.22.4",
+    "@band-store/dashboard": "2.22.4",
+    "@band-store/framework": "2.22.4",
+    "@band-store/icons": "2.22.4",
+    "@band-store/test-utils": "2.22.4",
+    "@band-store/ui": "4.2.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.4 || ^7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@band-store/admin-sdk": {
+      "optional": true
+    },
+    "@band-store/cli": {
+      "optional": true
+    },
+    "@band-store/dashboard": {
+      "optional": true
+    },
+    "@band-store/icons": {
+      "optional": true
+    },
+    "@band-store/test-utils": {
+      "optional": true
+    },
+    "@band-store/ui": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-router-dom": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "packageManager": "yarn@4.18.1"
+}

@@ -1,0 +1,62 @@
+import { bandStoreIntegrationTestRunner } from "@band-store/test-utils"
+import { ICustomerModuleService } from "@band-store/types"
+import { Modules } from "@band-store/utils"
+import { createAdminUser } from "../../../../helpers/create-admin-user"
+
+jest.setTimeout(50000)
+
+const env = {}
+const adminHeaders = {
+  headers: { "x-band-store-access-token": "test_token" },
+}
+
+bandStoreIntegrationTestRunner({
+  env,
+  testSuite: ({ dbConnection, getContainer, api, dbUtils }) => {
+    describe("DELETE /admin/customers/:id/addresses/:address_id", () => {
+      let appContainer
+      let customerModuleService: ICustomerModuleService
+
+      beforeAll(async () => {
+        appContainer = getContainer()
+        customerModuleService = appContainer.resolve(Modules.CUSTOMER)
+      })
+
+      beforeAll(async () => {
+        await createAdminUser(dbConnection, adminHeaders, appContainer)
+
+        await dbUtils.snapshot()
+      })
+
+      it("should update a customer address", async () => {
+        const customer = await customerModuleService.createCustomers({
+          first_name: "John",
+          last_name: "Doe",
+        })
+
+        const address = await customerModuleService.createCustomerAddresses({
+          customer_id: customer.id,
+          first_name: "John",
+          last_name: "Doe",
+          address_1: "Test street 1",
+        })
+
+        const response = await api.delete(
+          `/admin/customers/${customer.id}/addresses/${address.id}`,
+          adminHeaders
+        )
+
+        expect(response.status).toEqual(200)
+
+        const updatedCustomer = await customerModuleService.retrieveCustomer(
+          customer.id,
+          {
+            relations: ["addresses"],
+          }
+        )
+
+        expect(updatedCustomer.addresses?.length).toEqual(0)
+      })
+    })
+  },
+})

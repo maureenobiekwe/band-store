@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Feature Request
+    url: https://github.com/band-storejs/band-store/discussions/categories/feature-requests
+    about: Use GitHub Discussions to open a feature request.
+  - name: Ask a question
+    url: 
+    about: Join our community to ask questions and participate in discussions
+  - name: Want to work with us?
+    url: mailto:hello@band-store.com?subject=[GitHub]%20Working%20with%20band-store
+    about: Interested in working with Band Store? Get in touch!

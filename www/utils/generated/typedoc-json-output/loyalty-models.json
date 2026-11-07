@@ -1,0 +1,608 @@
+{
+	"schemaVersion": "2.0",
+	"id": 67691,
+	"name": "loyalty-models",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 67692,
+			"name": "GiftCard",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "gift-card.ts",
+					"line": 4,
+					"character": 0,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L4"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 67693,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 67694,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67695,
+											"name": "status",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"packageName": "@band-store/loyalty-plugin",
+																"packagePath": "src/types/loyalty/module.ts",
+																"qualifiedName": "GiftCardStatus"
+															},
+															"name": "GiftCardStatus",
+															"package": "@band-store/loyalty-plugin",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67696,
+											"name": "value",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/big-number.ts",
+													"qualifiedName": "BigNumberProperty"
+												},
+												"name": "BigNumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67697,
+											"name": "code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67698,
+											"name": "currency_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 11,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67699,
+											"name": "expires_at",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 12,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/date-time.ts",
+													"qualifiedName": "DateTimeProperty"
+												},
+												"name": "DateTimeProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67700,
+											"name": "reference_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 13,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67701,
+											"name": "reference",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 14,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67702,
+											"name": "line_item_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 15,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67703,
+											"name": "note",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 16,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 67704,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "gift-card.ts",
+													"line": 17,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L17"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												67694,
+												67695,
+												67696,
+												67697,
+												67698,
+												67699,
+												67700,
+												67701,
+												67702,
+												67703,
+												67704
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 67705,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 67706,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "gift-card.ts",
+											"line": 5,
+											"character": 4,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L5"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "loyalty_gift_card"
+									},
+									"defaultValue": "\"loyalty_gift_card\""
+								},
+								{
+									"id": 67707,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "gift-card.ts",
+											"line": 5,
+											"character": 36,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/loyalty/models/gift-card.ts#L5"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "GiftCard"
+									},
+									"defaultValue": "\"GiftCard\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										67706,
+										67707
+									]
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			}
+		}
+	],
+	"groups": [
+		{
+			"title": "Variables",
+			"children": [
+				67692
+			]
+		}
+	],
+	"packageName": "@band-store/loyalty-plugin",
+	"symbolIdMap": {
+		"67691": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/index.ts",
+			"qualifiedName": ""
+		},
+		"67692": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "default"
+		},
+		"67693": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object"
+		},
+		"67694": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.id"
+		},
+		"67695": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.status"
+		},
+		"67696": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.value"
+		},
+		"67697": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.code"
+		},
+		"67698": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"67699": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.expires_at"
+		},
+		"67700": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.reference_id"
+		},
+		"67701": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.reference"
+		},
+		"67702": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.line_item_id"
+		},
+		"67703": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.note"
+		},
+		"67704": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"67705": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object"
+		},
+		"67706": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"67707": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/loyalty/models/gift-card.ts",
+			"qualifiedName": "__object.name"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/plugins/loyalty/src/modules/loyalty/models/index.ts"
+		},
+		"reflections": {
+			"1": 67691
+		}
+	}
+}

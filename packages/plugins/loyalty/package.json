@@ -1,0 +1,121 @@
+{
+  "name": "@band-store/loyalty-plugin",
+  "version": "2.22.4",
+  "description": "Band Store Plugin: Loyalty - Gift Cards",
+  "author": "band-store ()",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/band-storejs/band-store.git",
+    "directory": "packages/plugins/loyalty"
+  },
+  "bugs": {
+    "url": "https://github.com/band-storejs/band-store/issues"
+  },
+  "files": [
+    ".band-store/server",
+    "AGENTS.md"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./modules/loyalty/*": "./.band-store/server/src/modules/loyalty/index.js",
+    "./.band-store/server/src/modules/loyalty": "./.band-store/server/src/modules/loyalty/index.js",
+    "./.band-store/server/src/modules/store-credit": "./.band-store/server/src/modules/store-credit/index.js",
+    "./.band-store/server/src/*": "./.band-store/server/src/**/*.js",
+    "./workflows": {
+      "import": "./.band-store/server/src/workflows/index.js",
+      "types": "./.band-store/server/src/workflows/index.d.ts",
+      "require": "./.band-store/server/src/workflows/index.js"
+    },
+    "./types": {
+      "import": "./.band-store/server/src/types/index.js",
+      "types": "./.band-store/server/src/types/index.d.ts",
+      "require": "./.band-store/server/src/types/index.js"
+    },
+    "./admin": {
+      "import": "./.band-store/server/src/admin/index.mjs",
+      "require": "./.band-store/server/src/admin/index.js",
+      "default": "./.band-store/server/src/admin/index.js"
+    }
+  },
+  "keywords": [
+    "sqlite",
+    "postgres",
+    "typescript",
+    "ecommerce",
+    "headless",
+    "Band Store",
+    "plugin"
+  ],
+  "scripts": {
+    "build:plugin": "Band Store plugin:build",
+    "dev": "Band Store plugin:develop",
+    "prepare": "cross-env NODE_ENV=production yarn run build:plugin",
+    "link:watch": "Band Store plugin:publish && Band Store plugin:develop",
+    "test": "../../../node_modules/.bin/jest --bail --forceExit --testPathPatterns=src",
+    "watch": "Band Store plugin:develop"
+  },
+  "devDependencies": {
+    "@band-store/admin-sdk": "2.22.4",
+    "@band-store/band-store": "2.22.4",
+    "@band-store/cli": "2.22.4",
+    "@band-store/dashboard": "2.22.4",
+    "@band-store/framework": "2.22.4",
+    "@band-store/icons": "2.22.4",
+    "@band-store/test-utils": "2.22.4",
+    "@band-store/types": "2.22.4",
+    "@band-store/ui": "4.2.11",
+    "@band-store/ui-preset": "2.22.4",
+    "@swc/core": "^1.16.20",
+    "@types/node": "^22.20.5",
+    "cross-env": "^10.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
+  },
+  "peerDependencies": {
+    "@band-store/admin-sdk": "2.22.4",
+    "@band-store/band-store": "2.22.4",
+    "@band-store/cli": "2.22.4",
+    "@band-store/dashboard": "2.22.4",
+    "@band-store/framework": "2.22.4",
+    "@band-store/icons": "2.22.4",
+    "@band-store/test-utils": "2.22.4",
+    "@band-store/ui": "4.2.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.4 || ^7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@band-store/admin-sdk": {
+      "optional": true
+    },
+    "@band-store/cli": {
+      "optional": true
+    },
+    "@band-store/dashboard": {
+      "optional": true
+    },
+    "@band-store/icons": {
+      "optional": true
+    },
+    "@band-store/test-utils": {
+      "optional": true
+    },
+    "@band-store/ui": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-router-dom": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "packageManager": "yarn@4.18.1"
+}

@@ -1,0 +1,90 @@
+# @band-store/auth-oidc
+
+## 2.22.4
+
+### Patch Changes
+
+- Updated dependencies [`3a0cbbb`, `3d85f84`]:
+  - @band-store/framework@2.22.4
+
+## 2.22.3
+
+### Patch Changes
+
+- #17595 `d4db323` Thanks [@shahednasser](https://github.com/shahednasser)! - chore(auth-oidc): update openid-client to v6
+
+- #17618 `385c4ff` Thanks [@shahednasser](https://github.com/shahednasser)! - chore: update jest to v30.5.2 and use the `--testPathPatterns` flag in test scripts
+
+- Updated dependencies [`9692b99`, `2e0d8ae`, `385c4ff`, `2276c84`, `a6a4254`]:
+  - @band-store/framework@2.22.3
+
+## 2.22.2
+
+### Patch Changes
+
+- Updated dependencies [`ca881e5`, `9d55082`, `26e5807`, `52caddd`]:
+  - @band-store/framework@2.22.2
+
+## 2.22.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.22.1
+
+## 2.22.0
+
+### Minor Changes
+
+- #17089 `d249d29ddef76d0bde0b68899b9fe5f9faa1ef6a` Thanks [@shahednasser](https://github.com/shahednasser)! - chore: drop Node.js 20 support and require Node.js v22.22.0 or later
+
+### Patch Changes
+
+- #17382 `1db74006ede40300afe64970024688a1a9c2a936` Thanks [@shahednasser](https://github.com/shahednasser)! - chore: ship AGENTS.md in published packages and add agent discovery fields to package.json
+
+- Updated dependencies [`d249d29ddef76d0bde0b68899b9fe5f9faa1ef6a`, `14499a2e9309d653c0e4ec6aec3f88079751b4d2`, `44db0ca6357ab4d4681a8004e869fde339c3117a`, `1db74006ede40300afe64970024688a1a9c2a936`]:
+  - @band-store/framework@2.22.0
+
+## 2.21.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.21.2
+
+## 2.21.1
+
+### Patch Changes
+
+- Updated dependencies [`c000d377f1a90d14bcda41500b1ed5bc2734902e`]:
+  - @band-store/framework@2.21.1
+
+## 2.21.0
+
+### Patch Changes
+
+- Updated dependencies [`e9d1f84dbfacd35d7787d1af03215a6ae5a176d8`, `a4c0a845e8b3a7a5acfaacbb0c093cd539ac713b`, `c8701e77534f7b615c8b86814f8d5789c0104382`, `df8c278d615229436be5b299ebdc76a576695fc3`]:
+  - @band-store/framework@2.21.0
+
+## 2.20.1
+
+### Patch Changes
+
+- Updated dependencies [`f373c17dd60cb1e7df1d0c70db31d516d2a0cb4f`]:
+  - @band-store/framework@2.20.1
+
+## 2.20.0
+
+### Patch Changes
+
+- Updated dependencies [`847612908fdd1c11a4df09ccc2e8ab44d338bb04`, `785fd2b8a978201638a4d8d5ae9eea483958c0fb`, `706ce874672c9cd1d8fc0c5429fc0dd24e6910a9`, `6a2fce501f3bcd459c21a67f586c7a15b905ff0f`, `5e06e544a296b9033f20f71f11c559f81a0e5739`]:
+  - @band-store/framework@2.20.0
+
+## 2.19.0
+
+### Patch Changes
+
+- #16023 `3ff26b6f7f036392ad1a97e67daea6b83c3fee23` Thanks [@NicolasGorga](https://github.com/NicolasGorga)! - feat(auth-oidc,dashboard,auth,js-sdk,types,Band Store): generic OIDC auth provider
+
+- Updated dependencies [`372a1ab8fa4c8415f1eda294e3c4c5d9dbee4a30`, `5f4d93c374b0ad0b0a31e75de98c7557e0415677`, `5105fec20908cf7bcd7f5f859674acdd8a38b982`]:
+  - @band-store/framework@2.19.0

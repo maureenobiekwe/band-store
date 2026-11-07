@@ -1,0 +1,21 @@
+{
+  "name": "docs-tailwind",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "tailwind.config.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "tailwind.config.js",
+    "postcss.config.js"
+  ],
+  "dependencies": {
+    "@band-store/ui-preset": "link:../../../packages/design-system/ui-preset",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "peerDependencies": {
+    "docs-ui": "*"
+  }
+}

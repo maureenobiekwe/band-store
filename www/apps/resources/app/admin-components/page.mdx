@@ -1,0 +1,81 @@
+---
+generate_toc: true
+---
+
+import { ChildDocs } from "docs-ui"
+
+export const metadata = {
+  title: `BandStore Admin Components, Hooks, and Utilities`,
+}
+
+# {metadata.title}
+
+In this section of the documentation, you'll find the components, hooks, layouts, and utilities that the `@band-store/dashboard` package exports, and how to use them in your [admin extensions](!docs!/learn/fundamentals/admin).
+
+Use these exports to build widgets and UI routes that follow the same design conventions as the Band Store Admin, without re-implementing its components.
+
+<Note>
+
+The `@band-store/dashboard` package exports these components, hooks, and utilities since Band Store v2.21.0. Before that version, you had to build the components yourself, as shown in the [archived guides](./archive/page.mdx).
+
+</Note>
+
+The package has the following subpaths:
+
+- `@band-store/dashboard/components`: React components, such as `ActionMenu` and `DataTable`.
+- `@band-store/dashboard/hooks`: React hooks, such as `useProducts` and `useComboboxData`.
+- `@band-store/dashboard/lib`: Utilities, such as `getStylizedAmount` and `defineSearchEntity`.
+
+<Note title="Tip">
+
+These exports build on the [Band Store UI package](!ui!). Refer to the [Band Store UI documentation](!ui!) for a full list of the underlying components.
+
+</Note>
+
+---
+
+## Components
+
+These components allow you to use the Band Store Admin's components in your custom UI routes and widgets.
+
+<ChildDocs showItems={["Components"]} onlyTopLevel={false} hideTitle />
+
+---
+
+## Layouts
+
+These layout components allow you to set the layout of your [UI routes](!docs!/learn/fundamentals/admin/ui-routes) similar to the layouts used in the Band Store Admin.
+
+<ChildDocs showItems={["Layouts"]} onlyTopLevel={false} hideTitle />
+
+---
+
+## Hooks
+
+These hooks allow you to fetch and mutate Band Store resources, and to build admin UI with the same behavior as the Band Store Admin.
+
+<ChildDocs showItems={["Hooks"]} onlyTopLevel={false} hideTitle />
+
+---
+
+## Utilities
+
+These utilities allow you to format data, validate forms, and register custom table and search behavior.
+
+<ChildDocs showItems={["Utilities"]} onlyTopLevel={false} hideTitle />
+
+---
+
+## Custom Component Guides
+
+These guides show how to build components and pages that the `@band-store/dashboard` package doesn't export an equivalent for.
+
+<ChildDocs showItems={["Guides"]} onlyTopLevel={false} hideTitle />
+
+---
+
+## Archive
+
+These guides show how to build components that Band Store now exports. They're kept for reference only. Refer to the [archive](./archive/page.mdx) for the exported component that replaces each guide.
+
+<ChildDocs showItems={["Archive"]} onlyTopLevel={false} hideTitle />

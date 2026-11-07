@@ -1,0 +1,7 @@
+extends: existence
+message: "Avoid using our"
+link: 
+level: warning
+ignorecase: true
+tokens:
+  - ours?

@@ -1,0 +1,403 @@
+# @band-store/analytics-posthog
+
+## 2.22.4
+
+### Patch Changes
+
+- Updated dependencies [`3a0cbbb`, `3d85f84`]:
+  - @band-store/framework@2.22.4
+
+## 2.22.3
+
+### Patch Changes
+
+- Updated dependencies [`9692b99`, `2e0d8ae`, `385c4ff`, `2276c84`, `a6a4254`]:
+  - @band-store/framework@2.22.3
+
+## 2.22.2
+
+### Patch Changes
+
+- #17532 `8e7ed52` Thanks [@shahednasser](https://github.com/shahednasser)! - chore(analytics-posthog): update posthog-node to ^5.57.0
+
+- Updated dependencies [`ca881e5`, `9d55082`, `26e5807`, `52caddd`]:
+  - @band-store/framework@2.22.2
+
+## 2.22.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.22.1
+
+## 2.22.0
+
+### Minor Changes
+
+- #17089 `d249d29ddef76d0bde0b68899b9fe5f9faa1ef6a` Thanks [@shahednasser](https://github.com/shahednasser)! - chore: drop Node.js 20 support and require Node.js v22.22.0 or later
+
+### Patch Changes
+
+- #17382 `1db74006ede40300afe64970024688a1a9c2a936` Thanks [@shahednasser](https://github.com/shahednasser)! - chore: ship AGENTS.md in published packages and add agent discovery fields to package.json
+
+- Updated dependencies [`d249d29ddef76d0bde0b68899b9fe5f9faa1ef6a`, `14499a2e9309d653c0e4ec6aec3f88079751b4d2`, `44db0ca6357ab4d4681a8004e869fde339c3117a`, `1db74006ede40300afe64970024688a1a9c2a936`]:
+  - @band-store/framework@2.22.0
+
+## 2.21.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.21.2
+
+## 2.21.1
+
+### Patch Changes
+
+- Updated dependencies [`c000d377f1a90d14bcda41500b1ed5bc2734902e`]:
+  - @band-store/framework@2.21.1
+
+## 2.21.0
+
+### Patch Changes
+
+- Updated dependencies [`e9d1f84dbfacd35d7787d1af03215a6ae5a176d8`, `a4c0a845e8b3a7a5acfaacbb0c093cd539ac713b`, `c8701e77534f7b615c8b86814f8d5789c0104382`, `df8c278d615229436be5b299ebdc76a576695fc3`]:
+  - @band-store/framework@2.21.0
+
+## 2.20.1
+
+### Patch Changes
+
+- Updated dependencies [`f373c17dd60cb1e7df1d0c70db31d516d2a0cb4f`]:
+  - @band-store/framework@2.20.1
+
+## 2.20.0
+
+### Patch Changes
+
+- Updated dependencies [`847612908fdd1c11a4df09ccc2e8ab44d338bb04`, `785fd2b8a978201638a4d8d5ae9eea483958c0fb`, `706ce874672c9cd1d8fc0c5429fc0dd24e6910a9`, `6a2fce501f3bcd459c21a67f586c7a15b905ff0f`, `5e06e544a296b9033f20f71f11c559f81a0e5739`]:
+  - @band-store/framework@2.20.0
+
+## 2.19.0
+
+### Patch Changes
+
+- Updated dependencies [`372a1ab8fa4c8415f1eda294e3c4c5d9dbee4a30`, `5f4d93c374b0ad0b0a31e75de98c7557e0415677`, `5105fec20908cf7bcd7f5f859674acdd8a38b982`]:
+  - @band-store/framework@2.19.0
+
+## 2.18.0
+
+### Patch Changes
+
+- Updated dependencies [`1621e14330fe64a968510991408ace8fdac84ce9`, `1359d1bf6237aa058910b805395932cd070d2043`, `3bf2b51b7e140c3a7f45ad9c9a8a6bd4f470ff09`, `d76952b5b0e4b287747a7e08f2cb745510143aae`, `d6b2a87da1dbfd065336c80e41cb7c086dc2a340`, `6ef16b6fdc6f04b900583a5f2714a863011ed19a`, `70c122753875f3cca03ff49b8a0ea9fe2c5e1165`, `144c47aba88f6e08fb7c99634c9fec8474721b0a`, `513c01a5a7f587cb52c92677e2379e54bd990361`]:
+  - @band-store/framework@2.18.0
+
+## 2.17.2
+
+### Patch Changes
+
+- #15683 `de58ec503bcd82aae3fe576f9a404c36e2525f4c` Thanks [@Floofy6](https://github.com/Floofy6)! - chore: add package bugs metadata
+
+- Updated dependencies [`de58ec503bcd82aae3fe576f9a404c36e2525f4c`]:
+  - @band-store/framework@2.17.2
+
+## 2.17.1
+
+### Patch Changes
+
+- Updated dependencies [`975313f62b22055ddaacf7852f33cf7b0f4af5df`]:
+  - @band-store/framework@2.17.1
+
+## 2.17.0
+
+### Patch Changes
+
+- Updated dependencies [`57b8e74d0fea8fb0e9dccd76eb6df06f0380071a`]:
+  - @band-store/framework@2.17.0
+
+## 2.16.0
+
+### Patch Changes
+
+- Updated dependencies [`8a6664d6d445f875f56078fad21fe12a185b9627`, `20352f4fa2f31e5b491c8b1b244c407392939fbf`, `90af038c95c835dee5168ffd19cda5182d81b904`, `66610b87efb112e37b78c7c9536d95070b8d6b11`]:
+  - @band-store/framework@2.16.0
+
+## 2.15.5
+
+### Patch Changes
+
+- Updated dependencies [`8122633a8b33164a6094f5a39896e356efde1747`, `538f98da78ae2d741f1182e6ef315ba8efac6911`]:
+  - @band-store/framework@2.15.5
+
+## 2.15.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.15.4
+
+## 2.15.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.15.3
+
+## 2.15.2
+
+### Patch Changes
+
+- Updated dependencies [`2b21d15640ae459386b0acea4c83804c6f502b9d`]:
+  - @band-store/framework@2.15.2
+
+## 2.15.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.15.1
+
+## 2.15.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.15.0
+
+## 2.14.2
+
+### Patch Changes
+
+- Updated dependencies [`be0b8817a1e2e48e1c6c579de6598c6f5e9bf4b0`, `7c659ff3d69c43bd7477bcc8a1c0afd092ea1c23`]:
+  - @band-store/framework@2.14.2
+
+## 2.14.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.14.1
+
+## 2.14.0
+
+### Patch Changes
+
+- Updated dependencies [`0929b8d192833e10b6b91795f1ffc478938c3fb7`, `843dbfe7c8f27b732486c7a8da7b6d63f2fdf967`]:
+  - @band-store/framework@2.14.0
+
+## 2.13.6
+
+### Patch Changes
+
+- Updated dependencies [`2b0cd5ff0ce00bf1de1d99632f1bda4073ac035d`]:
+  - @band-store/framework@2.13.6
+
+## 2.13.5
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.13.5
+
+## 2.13.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.13.4
+
+## 2.13.3
+
+### Patch Changes
+
+- Updated dependencies [`dbaae9630d26a0806751d5614beadef3e0b4bf07`]:
+  - @band-store/framework@2.13.3
+
+## 2.13.2
+
+### Patch Changes
+
+- Updated dependencies [`7aca778ae56069371f5d26a757d3b2276d524776`, `77d899e135ed75668ca7d7b01a8ed4f0c1fe0ac8`]:
+  - @band-store/framework@2.13.2
+
+## 2.13.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.13.1
+
+## 2.13.0
+
+### Minor Changes
+
+- `a31e72c31c5235240cead2d04e39e5927688eec7` Thanks [@olivermrbl](https://github.com/olivermrbl)! - chore: Minor bump
+
+### Patch Changes
+
+- Updated dependencies [`a31e72c31c5235240cead2d04e39e5927688eec7`]:
+  - @band-store/framework@2.13.0
+
+## 2.12.6
+
+### Patch Changes
+
+- #14562 `d5cea0e0c84539027e20cefc2007d53990933175` Thanks [@peterlgh7](https://github.com/peterlgh7)! - fix validation in posthog-analytics identify
+
+- #14562 `d5cea0e0c84539027e20cefc2007d53990933175` Thanks [@peterlgh7](https://github.com/peterlgh7)! - await analytics provider method calls
+
+- Updated dependencies [`13476988763368b3b333fa5bc3f613e8eb174fdf`, `8890f284705a4843a57a3800820208f593689a2a`, `1ca3516a5cbb059ad79fe483cd8e1d6a7ebca23b`]:
+  - @band-store/framework@2.12.6
+
+## 2.12.5
+
+### Patch Changes
+
+- Updated dependencies [`233ec261be200fac83002415aa7c0df082339a3f`]:
+  - @band-store/framework@2.12.5
+
+## 2.12.4
+
+### Patch Changes
+
+- Updated dependencies [`181d5fa67122e4e5f38b91f6b716d35f2d08a204`, `d347e369ce555064e24f2dc3cd93b9e4e73a006d`]:
+  - @band-store/framework@2.12.4
+
+## 2.12.3
+
+### Patch Changes
+
+- Updated dependencies [`7b4dda5a179c78de5e099231ec407836db4c8dbd`, `8964a03fa1b9e6a4c443bf5b21d65d41a8441d29`, `c8a7122ba918751b215dc0b19cf9b09b2c011ab8`]:
+  - @band-store/framework@2.12.3
+
+## 2.12.2
+
+### Patch Changes
+
+- Updated dependencies [`9f7846ae0babbad39947a1f33d236bff8b5098d0`, `fe49b567d6d55ae224095c06c710d31d40887653`, `6dc0b8bed84a330c1c24f4f1331f1ed078430a47`, `356283c359e5c30e0d31e6c6fd0fb8e16c025b78`]:
+  - @band-store/framework@2.12.2
+
+## 2.12.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.12.1
+
+## 2.12.0
+
+### Patch Changes
+
+- Updated dependencies [`c2c3ad5ba53f1959422fb2d37297a8de8d714782`, `7e3eb6e41316d7b04d32bc7186ed0c78de1aa539`, `beb91d88a2f224075e4fcf35a0ee9483b3124504`]:
+  - @band-store/framework@2.12.0
+
+## 2.11.3
+
+### Patch Changes
+
+- #13910 `224ab39a81e8d3cf3d6fa3ff5eee82541f64728d` Thanks [@adrien2p](https://github.com/adrien2p)! - chore(): Dependencies cleanup and improvements
+
+- #13932 `37563987b8fe75c9acfe62957a33e8398977647a` Thanks [@adrien2p](https://github.com/adrien2p)! - chore(): Fix dependencies vulnerabilities
+
+- Updated dependencies [`28c3ea68f5634792848f146ac6af5b27c848bf21`, `224ab39a81e8d3cf3d6fa3ff5eee82541f64728d`, `afb40d437b3cc4ceb015df70985b2f005f40eaff`, `37563987b8fe75c9acfe62957a33e8398977647a`, `13d7d15be594ca413785eebe8f86b47c36cb9830`]:
+  - @band-store/framework@2.11.3
+
+## 2.11.2
+
+### Patch Changes
+
+- Updated dependencies [`85b1f3d43aa8d8e0269a545ef7867733fd0eb8e2`]:
+  - @band-store/framework@2.11.2
+
+## 2.11.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.11.1
+
+## 2.11.0
+
+### Patch Changes
+
+- Updated dependencies [`12a96a7c7015f011f5e29a1d387f835e514ba536`, `b9d6f73320c36c53235b12fb8397b30a448917f0`, `8ece06d8ed6a197ebb370918c49a3ec5c21dd186`, `92d30b28f45b4037cd73c180c8f257070cf49bd4`, `02b6d013822b9665f868c4ea6d1b5cfe58723459`]:
+  - @band-store/framework@2.11.0
+
+## 2.10.3
+
+### Patch Changes
+
+- Updated dependencies [`25634b038248ab6501af719faec79b59b496bada`]:
+  - @band-store/framework@2.10.3
+
+## 2.10.2
+
+### Patch Changes
+
+- Updated dependencies [`b4c0f131b70ba950339c1ca4d81b5ce062a588a3`, `a4b72f9a21fd1d278c622fcd45d24bb9bfb1e0a8`]:
+  - @band-store/framework@2.10.2
+
+## 2.10.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.10.1
+
+## 2.10.0
+
+### Patch Changes
+
+- Updated dependencies [`e413cfefc2e0579ba7c5299dc4f4270310e39c2c`, `e2213448ac9eb93318570fde2807a3036108d44b`]:
+  - @band-store/framework@2.10.0
+
+## 2.9.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.9.0
+
+## 2.8.8
+
+### Patch Changes
+
+- Updated dependencies [`43fb06ecc2d87ea2a11e12524679c142eb890ec7`]:
+  - @band-store/framework@2.8.8
+
+## 2.8.7
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.8.7
+
+## 2.8.6
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @band-store/framework@2.8.6
+
+## 2.8.5
+
+### Patch Changes
+
+- Updated dependencies [`cbf3644eb7c8a24eaed879647b58c9ece3373c0e`, `d517dbd66a47817d1270c278b03add9a5c4244cb`, `820a936b9836ae83e7a45de1e1ed0488d8cde2fd`, `00505b4f8e49873123111752adfda47ccb35ab46`, `94b62c67249d13ec6342411cf7efdedfd0ac47e1`]:
+  - @band-store/framework@2.8.5
+
+## 2.8.4
+
+### Patch Changes
+
+- Updated dependencies [`7685d66c0775167994150e61a8b628ad6289ce23`, `cf0297f74af1b043363ffbd5a23ca0933097a69d`, `1f5f50010ae42f8d5b9924edcd75612b1f336463`]:
+  - @band-store/framework@2.8.4
+
+## 2.8.3
+
+### Patch Changes
+
+- #12539 `d9fdabe96d05108355c01081ea15d39467e40268` Thanks [@thetutlage](https://github.com/thetutlage)! - fix: mark posthog-node as a peer dependency
+
+- Updated dependencies []:
+  - @band-store/framework@2.8.3

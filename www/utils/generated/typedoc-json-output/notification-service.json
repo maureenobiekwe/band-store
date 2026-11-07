@@ -1,0 +1,1158 @@
+{
+	"schemaVersion": "2.0",
+	"id": 66725,
+	"name": "notification-service",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 66726,
+			"name": "INotificationModuleService",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 66727,
+					"name": "createNotifications",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "notification/service.ts",
+							"line": 29,
+							"character": 2,
+							"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L29"
+						},
+						{
+							"fileName": "notification/service.ts",
+							"line": 48,
+							"character": 2,
+							"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L48"
+						}
+					],
+					"signatures": [
+						{
+							"id": 66728,
+							"name": "createNotifications",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This method is used to send multiple notifications and store them in the database."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The list of sent notifications."
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nconst notifications = await notificationModuleService.createNotifications([\n  {\n    to: \"john@doe.me\",\n    template: \"order-confirmation\",\n    channel: \"email\",\n  },\n  {\n    to: \"+38975123456\",\n    template: \"order-confirmation\",\n    channel: \"sms\",\n  },\n])\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "notification/service.ts",
+									"line": 29,
+									"character": 2,
+									"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L29"
+								}
+							],
+							"parameters": [
+								{
+									"id": 66729,
+									"name": "data",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The notifications to be sent."
+											}
+										]
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": {
+												"packageName": "@band-store/types",
+												"packagePath": "src/notification/mutations.ts",
+												"qualifiedName": "CreateNotificationDTO"
+											},
+											"name": "CreateNotificationDTO",
+											"package": "@band-store/types"
+										}
+									}
+								},
+								{
+									"id": 66730,
+									"name": "sharedContext",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "A context used to share resources, such as transaction manager, between the application and the module."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/shared-context.ts",
+											"qualifiedName": "Context"
+										},
+										"name": "Context",
+										"package": "@band-store/types"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": {
+												"packageName": "@band-store/types",
+												"packagePath": "src/notification/common.ts",
+												"qualifiedName": "NotificationDTO"
+											},
+											"name": "NotificationDTO",
+											"package": "@band-store/types"
+										}
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						},
+						{
+							"id": 66731,
+							"name": "createNotifications",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This method is used to send a notification, and store the request in the database."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The sent notification."
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nconst notification = await notificationModuleService.createNotifications({\n  to: \"john@doe.me\",\n  template: \"order-confirmation\",\n  channel: \"email\",\n})\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "notification/service.ts",
+									"line": 48,
+									"character": 2,
+									"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L48"
+								}
+							],
+							"parameters": [
+								{
+									"id": 66732,
+									"name": "data",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The notification to be sent."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/notification/mutations.ts",
+											"qualifiedName": "CreateNotificationDTO"
+										},
+										"name": "CreateNotificationDTO",
+										"package": "@band-store/types"
+									}
+								},
+								{
+									"id": 66733,
+									"name": "sharedContext",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "A context used to share resources, such as transaction manager, between the application and the module."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/shared-context.ts",
+											"qualifiedName": "Context"
+										},
+										"name": "Context",
+										"package": "@band-store/types"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/notification/common.ts",
+											"qualifiedName": "NotificationDTO"
+										},
+										"name": "NotificationDTO",
+										"package": "@band-store/types"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 66734,
+					"name": "retrieveNotification",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "notification/service.ts",
+							"line": 89,
+							"character": 2,
+							"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L89"
+						}
+					],
+					"signatures": [
+						{
+							"id": 66735,
+							"name": "retrieveNotification",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This method is used to retrieve a notification by its ID"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The retrieved notification."
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "text",
+												"text": "A simple example that retrieves a notification by its ID:\n\n"
+											},
+											{
+												"kind": "code",
+												"text": "```ts\nconst notification =\n  await notificationModuleService.retrieveNotification(\"noti_123\")\n```"
+											},
+											{
+												"kind": "text",
+												"text": "\n\nTo specify relations that should be retrieved:\n\n:::note\n\nYou can only retrieve data models defined in the same module. To retrieve linked data models\nfrom other modules, use Query instead.\n\n:::\n\n"
+											},
+											{
+												"kind": "code",
+												"text": "```ts\nconst notification = await notificationModuleService.retrieveNotification(\n  \"noti_123\",\n  {\n    relations: [\"provider\"],\n  }\n)\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "notification/service.ts",
+									"line": 89,
+									"character": 2,
+									"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L89"
+								}
+							],
+							"parameters": [
+								{
+									"id": 66736,
+									"name": "notificationId",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The ID of the notification to retrieve."
+											}
+										]
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 66737,
+									"name": "config",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The configurations determining how the notification is retrieved. Its properties, such as "
+											},
+											{
+												"kind": "code",
+												"text": "`select`"
+											},
+											{
+												"kind": "text",
+												"text": " or "
+											},
+											{
+												"kind": "code",
+												"text": "`relations`"
+											},
+											{
+												"kind": "text",
+												"text": ", accept the\nattributes or relations associated with a notification."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/common/common.ts",
+											"qualifiedName": "FindConfig"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/types",
+													"packagePath": "src/notification/common.ts",
+													"qualifiedName": "NotificationDTO"
+												},
+												"name": "NotificationDTO",
+												"package": "@band-store/types"
+											}
+										],
+										"name": "FindConfig",
+										"package": "@band-store/types"
+									}
+								},
+								{
+									"id": 66738,
+									"name": "sharedContext",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "A context used to share resources, such as transaction manager, between the application and the module."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/shared-context.ts",
+											"qualifiedName": "Context"
+										},
+										"name": "Context",
+										"package": "@band-store/types"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/notification/common.ts",
+											"qualifiedName": "NotificationDTO"
+										},
+										"name": "NotificationDTO",
+										"package": "@band-store/types"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 66739,
+					"name": "listNotifications",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "notification/service.ts",
+							"line": 149,
+							"character": 2,
+							"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L149"
+						}
+					],
+					"signatures": [
+						{
+							"id": 66740,
+							"name": "listNotifications",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This method is used to retrieve a paginated list of notifications based on optional filters and configuration."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The list of notifications."
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "text",
+												"text": "To retrieve a list of notifications using their IDs:\n\n"
+											},
+											{
+												"kind": "code",
+												"text": "```ts\nconst notifications = await notificationModuleService.listNotifications({\n  id: [\"noti_123\", \"noti_321\"],\n})\n```"
+											},
+											{
+												"kind": "text",
+												"text": "\n\nTo specify relations that should be retrieved within the notifications:\n\n:::note\n\nYou can only retrieve data models defined in the same module. To retrieve linked data models\nfrom other modules, use Query instead.\n\n:::\n\n"
+											},
+											{
+												"kind": "code",
+												"text": "```ts\nconst notifications = await notificationModuleService.listNotifications(\n  {\n    id: [\"noti_123\", \"noti_321\"],\n  },\n  {\n    relations: [\"provider\"],\n  }\n)\n```"
+											},
+											{
+												"kind": "text",
+												"text": "\n\nBy default, only the first "
+											},
+											{
+												"kind": "code",
+												"text": "`15`"
+											},
+											{
+												"kind": "text",
+												"text": " records are retrieved. You can control pagination by specifying the "
+											},
+											{
+												"kind": "code",
+												"text": "`skip`"
+											},
+											{
+												"kind": "text",
+												"text": " and "
+											},
+											{
+												"kind": "code",
+												"text": "`take`"
+											},
+											{
+												"kind": "text",
+												"text": " properties of the "
+											},
+											{
+												"kind": "code",
+												"text": "`config`"
+											},
+											{
+												"kind": "text",
+												"text": " parameter:\n\n"
+											},
+											{
+												"kind": "code",
+												"text": "```ts\nconst notifications = await notificationModuleService.listNotifications(\n  {\n    id: [\"noti_123\", \"noti_321\"],\n  },\n  {\n    relations: [\"provider\"],\n    take: 20,\n    skip: 2,\n  }\n)\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "notification/service.ts",
+									"line": 149,
+									"character": 2,
+									"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L149"
+								}
+							],
+							"parameters": [
+								{
+									"id": 66741,
+									"name": "filters",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The filters to apply on the retrieved notifications."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/notification/common.ts",
+											"qualifiedName": "FilterableNotificationProps"
+										},
+										"name": "FilterableNotificationProps",
+										"package": "@band-store/types"
+									}
+								},
+								{
+									"id": 66742,
+									"name": "config",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The configurations determining how the notifications are retrieved. Its properties, such as "
+											},
+											{
+												"kind": "code",
+												"text": "`select`"
+											},
+											{
+												"kind": "text",
+												"text": " or "
+											},
+											{
+												"kind": "code",
+												"text": "`relations`"
+											},
+											{
+												"kind": "text",
+												"text": ", accept the\nattributes or relations associated with a notification."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/common/common.ts",
+											"qualifiedName": "FindConfig"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/types",
+													"packagePath": "src/notification/common.ts",
+													"qualifiedName": "NotificationDTO"
+												},
+												"name": "NotificationDTO",
+												"package": "@band-store/types"
+											}
+										],
+										"name": "FindConfig",
+										"package": "@band-store/types"
+									}
+								},
+								{
+									"id": 66743,
+									"name": "sharedContext",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "A context used to share resources, such as transaction manager, between the application and the module."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/shared-context.ts",
+											"qualifiedName": "Context"
+										},
+										"name": "Context",
+										"package": "@band-store/types"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": {
+												"packageName": "@band-store/types",
+												"packagePath": "src/notification/common.ts",
+												"qualifiedName": "NotificationDTO"
+											},
+											"name": "NotificationDTO",
+											"package": "@band-store/types"
+										}
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 66744,
+					"name": "listAndCountNotifications",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "notification/service.ts",
+							"line": 212,
+							"character": 2,
+							"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L212"
+						}
+					],
+					"signatures": [
+						{
+							"id": 66745,
+							"name": "listAndCountNotifications",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This method is used to retrieve a paginated list of notifications along with the total count of available notifications satisfying the provided filters."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "The list of notifications along with the total count."
+											}
+										]
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "text",
+												"text": "To retrieve a list of notifications using their IDs:\n\n"
+											},
+											{
+												"kind": "code",
+												"text": "```ts\nconst [notifications, count] =\n  await notificationModuleService.listAndCountNotifications({\n    id: [\"noti_123\", \"noti_321\"],\n  })\n```"
+											},
+											{
+												"kind": "text",
+												"text": "\n\nTo specify relations that should be retrieved within the notifications:\n\n:::note\n\nYou can only retrieve data models defined in the same module. To retrieve linked data models\nfrom other modules, use Query instead.\n\n:::\n\n"
+											},
+											{
+												"kind": "code",
+												"text": "```ts\nconst [notifications, count] =\n  await notificationModuleService.listAndCountNotifications(\n    {\n      id: [\"noti_123\", \"noti_321\"],\n    },\n    {\n      relations: [\"provider\"],\n    }\n  )\n```"
+											},
+											{
+												"kind": "text",
+												"text": "\n\nBy default, only the first "
+											},
+											{
+												"kind": "code",
+												"text": "`15`"
+											},
+											{
+												"kind": "text",
+												"text": " records are retrieved. You can control pagination by specifying the "
+											},
+											{
+												"kind": "code",
+												"text": "`skip`"
+											},
+											{
+												"kind": "text",
+												"text": " and "
+											},
+											{
+												"kind": "code",
+												"text": "`take`"
+											},
+											{
+												"kind": "text",
+												"text": " properties of the "
+											},
+											{
+												"kind": "code",
+												"text": "`config`"
+											},
+											{
+												"kind": "text",
+												"text": " parameter:\n\n"
+											},
+											{
+												"kind": "code",
+												"text": "```ts\nconst [notifications, count] =\n  await notificationModuleService.listAndCountNotifications(\n    {\n      id: [\"noti_123\", \"noti_321\"],\n    },\n    {\n      relations: [\"provider\"],\n      take: 20,\n      skip: 2,\n    }\n  )\n```"
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "notification/service.ts",
+									"line": 212,
+									"character": 2,
+									"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L212"
+								}
+							],
+							"parameters": [
+								{
+									"id": 66746,
+									"name": "filters",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The filters to apply on the retrieved notifications."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/notification/common.ts",
+											"qualifiedName": "FilterableNotificationProps"
+										},
+										"name": "FilterableNotificationProps",
+										"package": "@band-store/types"
+									}
+								},
+								{
+									"id": 66747,
+									"name": "config",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The configurations determining how the notifications are retrieved. Its properties, such as "
+											},
+											{
+												"kind": "code",
+												"text": "`select`"
+											},
+											{
+												"kind": "text",
+												"text": " or "
+											},
+											{
+												"kind": "code",
+												"text": "`relations`"
+											},
+											{
+												"kind": "text",
+												"text": ", accept the\nattributes or relations associated with a notification."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/common/common.ts",
+											"qualifiedName": "FindConfig"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/types",
+													"packagePath": "src/notification/common.ts",
+													"qualifiedName": "NotificationDTO"
+												},
+												"name": "NotificationDTO",
+												"package": "@band-store/types"
+											}
+										],
+										"name": "FindConfig",
+										"package": "@band-store/types"
+									}
+								},
+								{
+									"id": 66748,
+									"name": "sharedContext",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "A context used to share resources, such as transaction manager, between the application and the module."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "@band-store/types",
+											"packagePath": "src/shared-context.ts",
+											"qualifiedName": "Context"
+										},
+										"name": "Context",
+										"package": "@band-store/types"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "tuple",
+										"elements": [
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"target": {
+														"packageName": "@band-store/types",
+														"packagePath": "src/notification/common.ts",
+														"qualifiedName": "NotificationDTO"
+													},
+													"name": "NotificationDTO",
+													"package": "@band-store/types"
+												}
+											},
+											{
+												"type": "intrinsic",
+												"name": "number"
+											}
+										]
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						66727,
+						66734,
+						66739,
+						66744
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "notification/service.ts",
+					"line": 7,
+					"character": 17,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/core/types/src/notification/service.ts#L7"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"target": {
+						"packageName": "@band-store/types",
+						"packagePath": "src/modules-sdk/index.ts",
+						"qualifiedName": "IModuleService"
+					},
+					"name": "IModuleService",
+					"package": "@band-store/types"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Interfaces",
+			"children": [
+				66726
+			]
+		}
+	],
+	"packageName": "@band-store/types",
+	"symbolIdMap": {
+		"66725": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": ""
+		},
+		"66726": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService"
+		},
+		"66727": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService.createNotifications"
+		},
+		"66728": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService.createNotifications"
+		},
+		"66729": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "data"
+		},
+		"66730": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "sharedContext"
+		},
+		"66731": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService.createNotifications"
+		},
+		"66732": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "data"
+		},
+		"66733": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "sharedContext"
+		},
+		"66734": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService.retrieveNotification"
+		},
+		"66735": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService.retrieveNotification"
+		},
+		"66736": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "notificationId"
+		},
+		"66737": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "config"
+		},
+		"66738": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "sharedContext"
+		},
+		"66739": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService.listNotifications"
+		},
+		"66740": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService.listNotifications"
+		},
+		"66741": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "filters"
+		},
+		"66742": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "config"
+		},
+		"66743": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "sharedContext"
+		},
+		"66744": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService.listAndCountNotifications"
+		},
+		"66745": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "INotificationModuleService.listAndCountNotifications"
+		},
+		"66746": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "filters"
+		},
+		"66747": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "config"
+		},
+		"66748": {
+			"packageName": "@band-store/types",
+			"packagePath": "src/notification/service.ts",
+			"qualifiedName": "sharedContext"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/core/types/src/notification/service.ts"
+		},
+		"reflections": {
+			"1": 66725
+		}
+	}
+}

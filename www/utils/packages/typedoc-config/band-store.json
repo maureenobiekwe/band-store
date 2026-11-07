@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": [
+    "../../../../packages/band-store/tsconfig.json"
+  ],
+  "include": ["../../../../packages/band-store/src"],
+  "exclude": [
+    "../../../../packages/band-store/dist",
+    "../../../../packages/band-store/node_modules"
+  ],
+  "compilerOptions": {
+    "rootDir": "../../../../packages/band-store/src"
+  }
+}

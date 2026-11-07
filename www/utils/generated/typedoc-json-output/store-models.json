@@ -1,0 +1,1450 @@
+{
+	"schemaVersion": "2.0",
+	"id": 18617,
+	"name": "store-models",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"comment": {
+		"summary": [
+			{
+				"text": "## Relations Overview\n\n",
+				"kind": "text"
+			},
+			{
+				"text": "```mermaid\nerDiagram\n\tStore ||--|| StoreCurrency : supported_currencies\n\tStore ||--|| StoreLocale : supported_locales\n\n```",
+				"kind": "code"
+			}
+		]
+	},
+	"children": [
+		{
+			"id": 18649,
+			"name": "StoreCurrency",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "currency.ts",
+					"line": 4,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/currency.ts#L4"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 18650,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 18651,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the currency."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "currency.ts",
+													"line": 5,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/currency.ts#L5"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18652,
+											"name": "currency_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ISO 3 currency code. For example, `usd`."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "currency.ts",
+													"line": 6,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/currency.ts#L6"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18653,
+											"name": "is_default",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether the currency is the default in the store."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "currency.ts",
+													"line": 7,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/currency.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18654,
+											"name": "store",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The store this currency belongs to."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "currency.ts",
+													"line": 8,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/currency.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 18618,
+														"name": "Store"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												18651,
+												18652,
+												18653,
+												18654
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "StoreCurrency"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 18685,
+			"name": "StoreLocale",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"comment": {
+				"summary": [],
+				"blockTags": [
+					{
+						"tag": "@since",
+						"content": [
+							{
+								"kind": "text",
+								"text": "2.12.3"
+							}
+						]
+					},
+					{
+						"tag": "@since",
+						"content": [
+							{
+								"kind": "text",
+								"text": "2.12.3"
+							}
+						]
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "locale.ts",
+					"line": 7,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/locale.ts#L7"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 18686,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 18687,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the store locale."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "locale.ts",
+													"line": 8,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/locale.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18688,
+											"name": "locale_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The BCP 47 language tag code of the locale."
+													},
+													{
+														"kind": "text",
+														"text": "The locale code in BCP 47 format. For example, `en-US`."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "code",
+																"text": "```ts\n\"en-US\"\n```"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "locale.ts",
+													"line": 15,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/locale.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18689,
+											"name": "store",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated store."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "locale.ts",
+													"line": 16,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/locale.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 18618,
+														"name": "Store"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												18687,
+												18688,
+												18689
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "StoreLocale"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 18618,
+			"name": "Store",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "store.ts",
+					"line": 5,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/store.ts#L5"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 18619,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 18620,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the store."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "store.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/store.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18621,
+											"name": "name",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The name of the store"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "store.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/store.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18622,
+											"name": "default_sales_channel_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the store's default sales channel."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "store.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/store.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18623,
+											"name": "default_region_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the store's default region."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "store.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/store.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18624,
+											"name": "default_location_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the store's default stock location."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "store.ts",
+													"line": 11,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/store.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18625,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Holds custom data in key-value pairs."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "store.ts",
+													"line": 12,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/store.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18626,
+											"name": "supported_currencies",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The supported currencies in the store."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "store.ts",
+													"line": 13,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/store.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 18649,
+														"name": "StoreCurrency"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 18638,
+											"name": "supported_locales",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The supported locales of the store."
+													},
+													{
+														"kind": "text",
+														"text": "The supported locales in the store."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@since",
+														"content": [
+															{
+																"kind": "text",
+																"text": "2.12.3"
+															}
+														]
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "store.ts",
+													"line": 21,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/store/src/models/store.ts#L21"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 18685,
+														"name": "StoreLocale"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												18620,
+												18621,
+												18622,
+												18623,
+												18624,
+												18625,
+												18626,
+												18638
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "Store"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		}
+	],
+	"groups": [
+		{
+			"title": "Variables",
+			"children": [
+				18649,
+				18685,
+				18618
+			]
+		}
+	],
+	"packageName": "@band-store/store",
+	"symbolIdMap": {
+		"18617": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/index.ts",
+			"qualifiedName": ""
+		},
+		"18618": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "Store"
+		},
+		"18619": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object"
+		},
+		"18620": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.id"
+		},
+		"18621": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.name"
+		},
+		"18622": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_sales_channel_id"
+		},
+		"18623": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_region_id"
+		},
+		"18624": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_location_id"
+		},
+		"18625": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"18626": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_currencies"
+		},
+		"18627": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18628": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18629": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object"
+		},
+		"18630": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object.id"
+		},
+		"18631": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"18632": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object.is_default"
+		},
+		"18633": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object.store"
+		},
+		"18634": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__function"
+		},
+		"18635": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__function"
+		},
+		"18636": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__function"
+		},
+		"18637": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__function"
+		},
+		"18638": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_locales"
+		},
+		"18639": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18640": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18641": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__object"
+		},
+		"18642": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__object.id"
+		},
+		"18643": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__object.locale_code"
+		},
+		"18644": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__object.store"
+		},
+		"18645": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__function"
+		},
+		"18646": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__function"
+		},
+		"18647": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__function"
+		},
+		"18648": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__function"
+		},
+		"18649": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "StoreCurrency"
+		},
+		"18650": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object"
+		},
+		"18651": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object.id"
+		},
+		"18652": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"18653": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object.is_default"
+		},
+		"18654": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__object.store"
+		},
+		"18655": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__function"
+		},
+		"18656": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__function"
+		},
+		"18657": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object"
+		},
+		"18658": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.id"
+		},
+		"18659": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.name"
+		},
+		"18660": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_sales_channel_id"
+		},
+		"18661": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_region_id"
+		},
+		"18662": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_location_id"
+		},
+		"18663": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"18664": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_currencies"
+		},
+		"18665": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18666": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18667": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_locales"
+		},
+		"18668": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18669": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18670": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__function"
+		},
+		"18671": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/currency.ts",
+			"qualifiedName": "__function"
+		},
+		"18672": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object"
+		},
+		"18673": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.id"
+		},
+		"18674": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.name"
+		},
+		"18675": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_sales_channel_id"
+		},
+		"18676": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_region_id"
+		},
+		"18677": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_location_id"
+		},
+		"18678": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"18679": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_currencies"
+		},
+		"18680": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18681": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18682": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_locales"
+		},
+		"18683": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18684": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18685": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "StoreLocale"
+		},
+		"18686": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__object"
+		},
+		"18687": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__object.id"
+		},
+		"18688": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__object.locale_code"
+		},
+		"18689": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__object.store"
+		},
+		"18690": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__function"
+		},
+		"18691": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__function"
+		},
+		"18692": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object"
+		},
+		"18693": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.id"
+		},
+		"18694": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.name"
+		},
+		"18695": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_sales_channel_id"
+		},
+		"18696": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_region_id"
+		},
+		"18697": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_location_id"
+		},
+		"18698": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"18699": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_currencies"
+		},
+		"18700": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18701": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18702": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_locales"
+		},
+		"18703": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18704": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18705": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__function"
+		},
+		"18706": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/locale.ts",
+			"qualifiedName": "__function"
+		},
+		"18707": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object"
+		},
+		"18708": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.id"
+		},
+		"18709": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.name"
+		},
+		"18710": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_sales_channel_id"
+		},
+		"18711": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_region_id"
+		},
+		"18712": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.default_location_id"
+		},
+		"18713": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"18714": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_currencies"
+		},
+		"18715": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18716": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18717": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__object.supported_locales"
+		},
+		"18718": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		},
+		"18719": {
+			"packageName": "@band-store/store",
+			"packagePath": "src/models/store.ts",
+			"qualifiedName": "__function"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/modules/store/src/models/index.ts"
+		},
+		"reflections": {
+			"1": 18617
+		}
+	}
+}

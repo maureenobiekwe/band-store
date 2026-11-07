@@ -1,0 +1,83 @@
+import ModuleXErrorSection from '../_sections/common-installation-errors/module-x-error.mdx'
+
+export const metadata = {
+  title: `General Errors`,
+}
+
+# {metadata.title}
+
+This troubleshooting guide covers general errors you may encounter while installing or developing with Band Store and how to resolve them.
+
+## Resolve "Cannot find module X" Errors
+
+<ModuleXErrorSection />
+
+---
+
+## Cannot Find Module `@band-store/utils`
+
+If you encounter a TypeScript or build error like the following:
+
+```bash
+Cannot find module '@band-store/utils' or its corresponding type declarations
+```
+
+The package `@band-store/utils` does not exist as a public package. Use `@band-store/framework/utils` instead.
+
+For example, replace:
+
+{/* eslint-disable @band-store/import-from-framework-not-internal */}
+
+```ts
+import { BandStoreService } from "@band-store/utils" // wrong
+```
+
+With:
+
+```ts
+import { BandStoreService } from "@band-store/framework/utils" // correct
+```
+
+Common utilities and classes available from `@band-store/framework/utils` include `BandStoreService`, `BandStoreError`, `Modules`, `InjectManager`, `InjectTransactionManager`, and `BandStoreContext`.
+
+---
+
+## TypeError During `bandStore build` Config Loading
+
+If you encounter a `TypeError` like the following during `bandStore build` or `bandStore start`:
+
+```bash
+TypeError: Cannot read properties of null (reading 'admin')
+    at ConfigManager.loadConfig
+```
+
+This error means one of the required top-level properties in your `band-store-config.ts` is `null` or has an incorrect value. The config loader expects an object to be exported, not `null` or `undefined`.
+
+Check your `band-store-config.ts` and make sure:
+
+1. The file exports a valid configuration object using `defineConfig`.
+2. None of the required properties (`projectConfig`, `admin`, `modules`) are explicitly set to `null`.
+
+A minimal valid configuration looks like:
+
+```ts title="band-store-config.ts"
+import { loadEnv, defineConfig } from "@band-store/framework/utils"
+
+loadEnv(process.env.NODE_ENV || "development", process.cwd())
+
+module.exports = defineConfig({
+  projectConfig: {
+    databaseUrl: process.env.DATABASE_URL,
+    http: {
+      storeCors: process.env.STORE_CORS!,
+      adminCors: process.env.ADMIN_CORS!,
+      authCors: process.env.AUTH_CORS!,
+      jwtSecret: process.env.JWT_SECRET || "supersecret",
+      cookieSecret:
+        process.env.COOKIE_SECRET || "supersecret",
+    },
+  },
+})
+```
+
+For the full list of available configuration options, refer to [Configure Band Store](!docs!/learn/configurations/band-store-config).

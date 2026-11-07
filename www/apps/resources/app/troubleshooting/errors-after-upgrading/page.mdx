@@ -1,0 +1,19 @@
+export const metadata = {
+  title: `Errors After Upgrading BandStore`,
+}
+
+# {metadata.title}
+
+If you run into errors after updating your Band Store application, it's highly recommended to check the GitHub Release Notes for any upgrade guides related to the version you upgraded to. These release notes may include details on breaking changes and how to resolve them before upgrading.
+
+Also, after updating your Band Store application, make sure that you ran the `db:migrate` command in the root directory of your Band Store application:
+
+```bash npx2yarn
+npx bandStore db:migrate
+```
+
+This ensures your application has the latest database structure required. Then, try running your Band Store application again and check whether the same error occurs.
+
+## Additional Resources
+
+- [Updating Band Store](!docs!/learn/update)

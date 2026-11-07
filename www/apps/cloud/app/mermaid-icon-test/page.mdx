@@ -1,0 +1,23 @@
+export const metadata = {
+  title: `Mermaid Icon Test`,
+}
+
+# {metadata.title}
+
+```mermaid
+architecture-beta
+    group project[Project]
+    service prod(bandStore:terminal)[Production Environment] in project
+    service proddb(bandStore:database)[Production Database] in project
+    service staging(bandStore:terminal)[Staging Environment] in project
+    service stagingdb(bandStore:database)[Staging Database] in project
+    prod:R <--> L:proddb
+    staging:R <--> L:stagingdb
+```
+
+```mermaid
+flowchart LR
+    B@{ icon: "bandStore:terminal", form: "square", label: "Production Environment" }
+    A@{ icon: "bandStore:database", form: "square", label: "Production Database" }
+    B <--> A
+```

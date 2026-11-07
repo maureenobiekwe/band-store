@@ -1,0 +1,767 @@
+{
+	"schemaVersion": "2.0",
+	"id": 20491,
+	"name": "user-models",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 20500,
+			"name": "Invite",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "invite.ts",
+					"line": 3,
+					"character": 13,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/invite.ts#L3"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 20501,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 20502,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the invite."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "invite.ts",
+													"line": 5,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/invite.ts#L5"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20503,
+											"name": "email",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The email of the invited user."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "invite.ts",
+													"line": 6,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/invite.ts#L6"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20504,
+											"name": "accepted",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether the invite is accepted."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "invite.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/invite.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20505,
+											"name": "token",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The token of the invite."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "invite.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/invite.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20506,
+											"name": "expires_at",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "When the invite expires."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "invite.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/invite.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/date-time.ts",
+													"qualifiedName": "DateTimeProperty"
+												},
+												"name": "DateTimeProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20507,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Holds custom data in key-value pairs."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "invite.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/invite.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												20502,
+												20503,
+												20504,
+												20505,
+												20506,
+												20507
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "invite"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 20492,
+			"name": "User",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "user.ts",
+					"line": 3,
+					"character": 13,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/user.ts#L3"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 20493,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 20494,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the user."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user.ts",
+													"line": 5,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/user.ts#L5"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20495,
+											"name": "first_name",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The first name of the user."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user.ts",
+													"line": 6,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/user.ts#L6"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20496,
+											"name": "last_name",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The last name of the user."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/user.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20497,
+											"name": "email",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The email of the user."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/user.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20498,
+											"name": "avatar_url",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The image URL of the user's avatar."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/user.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 20499,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Holds custom data in key-value pairs."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "user.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/user/src/models/user.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												20494,
+												20495,
+												20496,
+												20497,
+												20498,
+												20499
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "user"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		}
+	],
+	"groups": [
+		{
+			"title": "Variables",
+			"children": [
+				20500,
+				20492
+			]
+		}
+	],
+	"packageName": "@band-store/user",
+	"symbolIdMap": {
+		"20491": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/index.ts",
+			"qualifiedName": ""
+		},
+		"20492": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/user.ts",
+			"qualifiedName": "User"
+		},
+		"20493": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/user.ts",
+			"qualifiedName": "__object"
+		},
+		"20494": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/user.ts",
+			"qualifiedName": "__object.id"
+		},
+		"20495": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/user.ts",
+			"qualifiedName": "__object.first_name"
+		},
+		"20496": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/user.ts",
+			"qualifiedName": "__object.last_name"
+		},
+		"20497": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/user.ts",
+			"qualifiedName": "__object.email"
+		},
+		"20498": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/user.ts",
+			"qualifiedName": "__object.avatar_url"
+		},
+		"20499": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/user.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"20500": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/invite.ts",
+			"qualifiedName": "Invite"
+		},
+		"20501": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/invite.ts",
+			"qualifiedName": "__object"
+		},
+		"20502": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/invite.ts",
+			"qualifiedName": "__object.id"
+		},
+		"20503": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/invite.ts",
+			"qualifiedName": "__object.email"
+		},
+		"20504": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/invite.ts",
+			"qualifiedName": "__object.accepted"
+		},
+		"20505": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/invite.ts",
+			"qualifiedName": "__object.token"
+		},
+		"20506": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/invite.ts",
+			"qualifiedName": "__object.expires_at"
+		},
+		"20507": {
+			"packageName": "@band-store/user",
+			"packagePath": "src/models/invite.ts",
+			"qualifiedName": "__object.metadata"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/modules/user/src/models/index.ts"
+		},
+		"reflections": {
+			"1": 20491
+		}
+	}
+}

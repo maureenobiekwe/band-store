@@ -1,0 +1,50 @@
+import { FigmaCard } from "@/components/FigmaCard"
+
+export const metadata = {
+  title: `BandStore UI Documentation`,
+}
+
+# {metadata.title}
+
+Welcome to Band Store UI, a React implementation of the Band Store design system.
+
+Band Store UI is a collection of components, hooks, utility functions, icons, and [Tailwind CSS](https://tailwindcss.com/) classes that can be used to build
+a consistent user interface across the Band Store Admin and client applications.
+
+## Figma Design System
+
+The Band Store UI design system is also available on Figma. You can explore the components, icons, and design tokens used in Band Store UI.
+
+This is especially useful if you have the [Figma Dev MCP](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server) set up, allowing you to easily copy designs from the Figma Band Store UI file to your projects.
+
+<FigmaCard />
+
+---
+
+## Packages
+
+Band Store UI is split into multiple packages. Each package is published to npm
+and can be installed separately.
+
+- `@band-store/ui` - React components, hooks, and utility functions used
+  in Band Store UI.
+- `@band-store/ui-preset` - Tailwind CSS preset containing all the classes
+  used in Band Store UI.
+- `@band-store/icons` - Icons used in Band Store UI.
+
+Learn how to install and use these packages either for [Band Store Admin](./installation/band-store-admin-extension/page.mdx) customizations or a [standalone project](./installation/standalone-project/page.mdx).
+
+---
+
+## How Band Store UI is Built
+
+At its core, Band Store UI is a styled and slightly opinionated implementation of [Radix Primitives](https://www.radix-ui.com/primitives).
+Our team has also referenced the fantastic [shadcn/ui](https://ui.shadcn.com/) for inspiration in certain implementations.
+
+Our team strongly believes in keeping the components simple and
+composable, much like Band Store's foundation. This allows you to build whatever you need.
+
+Our team has tried to avoid overloading
+the component API and, instead, has leveraged the native HTML API, which gets implemented
+and respected accordingly, and passed to the underlying elements.
+

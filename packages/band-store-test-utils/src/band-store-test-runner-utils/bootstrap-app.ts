@@ -1,0 +1,135 @@
+import { logger } from "@band-store/framework/logger"
+import { BandStoreContainer } from "@band-store/framework/types"
+import { GracefulShutdownServer, promiseAll } from "@band-store/framework/utils"
+import express from "express"
+import { resolve } from "path"
+import { applyEnvVarsToProcess, execOrTimeout, getFreePort } from "./utils"
+
+async function bootstrapApp({
+  cwd,
+  env = {},
+}: { cwd?: string; env?: Record<any, any> } = {}) {
+  const app = express()
+  const restoreEnvVars = applyEnvVarsToProcess(env)
+
+  // Register a health check endpoint
+  app.get("/health", (_, res) => {
+    res.status(200).send("OK")
+  })
+
+  const loaders = require("@band-store/band-store/loaders/index").default
+
+  try {
+    const { container, shutdown } = await loaders({
+      directory: resolve(cwd || process.cwd()),
+      expressApp: app,
+    })
+
+    const PORT = process.env.PORT ? parseInt(process.env.PORT) : await getFreePort()
+
+    return {
+      shutdown,
+      container,
+      app,
+      port: PORT,
+      restoreEnvVars,
+    }
+  } catch (error) {
+    restoreEnvVars()
+    logger.error("Error bootstrapping app:", error)
+    throw error
+  }
+}
+
+export async function startApp({
+  cwd,
+  env = {},
+}: { cwd?: string; env?: Record<any, any> } = {}): Promise<{
+  shutdown: () => Promise<void>
+  container: BandStoreContainer
+  port: number
+}> {
+  let expressServer: any
+  let bandStoreShutdown: () => Promise<void> = async () => void 0
+  let container: BandStoreContainer
+
+  try {
+    const {
+      app,
+      port,
+      container: appContainer,
+      shutdown: appShutdown,
+      restoreEnvVars,
+    } = await bootstrapApp({
+      cwd,
+      env,
+    })
+
+    container = appContainer
+    bandStoreShutdown = appShutdown
+
+    const shutdown = async () => {
+      try {
+        const shutdownPromise = promiseAll([
+          expressServer?.shutdown(),
+          bandStoreShutdown(),
+        ])
+
+        await execOrTimeout(shutdownPromise)
+
+        if (typeof global !== "undefined" && global?.gc) {
+          global.gc()
+        }
+      } catch (error) {
+        logger.error("Error during shutdown:", error)
+        try {
+          await expressServer?.shutdown()
+          await bandStoreShutdown()
+        } catch (cleanupError) {
+          logger.error("Error during forced cleanup:", cleanupError)
+        }
+        throw error
+      } finally {
+        restoreEnvVars()
+      }
+    }
+
+    return await new Promise((resolve, reject) => {
+      const server = app
+        .listen(port)
+        .on("error", async (err) => {
+          logger.error("Error starting server:", err)
+          await shutdown()
+          return reject(err)
+        })
+        .on("listening", () => {
+          process.send?.(port)
+
+          resolve({
+            shutdown,
+            container,
+            port,
+          })
+        })
+
+      expressServer = GracefulShutdownServer.create(server)
+    })
+  } catch (error) {
+    logger.error("Error in startApp:", error)
+    if (expressServer) {
+      try {
+        await expressServer.shutdown()
+      } catch (cleanupError) {
+        logger.error("Error cleaning up express server:", cleanupError)
+      }
+    }
+    if (bandStoreShutdown) {
+      try {
+        await bandStoreShutdown()
+      } catch (cleanupError) {
+        logger.error("Error cleaning up bandStore:", cleanupError)
+      }
+    }
+    throw error
+  }
+}

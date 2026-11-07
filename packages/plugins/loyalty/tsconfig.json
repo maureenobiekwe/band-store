@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "esModuleInterop": true,
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "declaration": true,
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "outDir": "./.band-store/server",
+    "rootDir": "./",
+    "jsx": "react-jsx",
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "checkJs": false,
+    "strictNullChecks": true,
+    "strict": false,
+    "types": ["*"]
+  },
+  "ts-node": {
+    "swc": true
+  },
+  "include": ["**/*", ".band-store/types/*"],
+  "exclude": [
+    "node_modules",
+    ".band-store/server",
+    ".band-store/admin",
+    "src/admin",
+    ".cache",
+    "jest.config.js"
+  ]
+}

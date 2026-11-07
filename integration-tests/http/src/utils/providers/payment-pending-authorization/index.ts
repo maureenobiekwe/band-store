@@ -1,0 +1,8 @@
+import { ModuleProvider, Modules } from "@band-store/framework/utils"
+import { PendingAuthorizationPaymentProvider } from "./provider"
+
+const services = [PendingAuthorizationPaymentProvider]
+
+export default ModuleProvider(Modules.PAYMENT, {
+  services,
+})

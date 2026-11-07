@@ -1,0 +1,1 @@
+Directory of old Band Store documentation. You can find it on the v1.x branch

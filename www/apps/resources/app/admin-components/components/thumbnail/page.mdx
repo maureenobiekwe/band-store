@@ -1,0 +1,77 @@
+---
+sidebar_label: "Thumbnail"
+---
+
+import { TypeList } from "docs-ui"
+
+export const metadata = {
+  title: `Thumbnail - Admin Components`,
+}
+
+# {metadata.title}
+
+<Note>
+
+This component is available since Band Store v2.21.0.
+
+</Note>
+
+The `Thumbnail` component shows a small image in a bordered box, falling back to a photo icon when there's no image. The Band Store Admin uses it next to product names in tables and lists.
+
+```tsx
+import { Thumbnail } from "@band-store/dashboard/components"
+```
+
+---
+
+## Example
+
+Use `Thumbnail` in a [widget](!docs!/learn/fundamentals/admin/widgets) or [UI route](!docs!/learn/fundamentals/admin/ui-routes) to show a record's image:
+
+```tsx
+import { Thumbnail } from "@band-store/dashboard/components"
+import { Text } from "@band-store/ui"
+
+const ProductItem = ({ product }) => {
+  return (
+    <div className="flex items-center gap-x-3">
+      <Thumbnail
+        src={product.thumbnail}
+        alt={product.title}
+        size="small"
+      />
+      <Text size="small">{product.title}</Text>
+    </div>
+  )
+}
+```
+
+---
+
+## Props
+
+The component accepts the `ThumbnailProps` type:
+
+<TypeList
+  types={[
+    {
+      name: "src",
+      type: "`string` \\| `null`",
+      optional: true,
+      description: `The image's URL. When you don't pass it, BandStore shows a photo icon as a placeholder.`,
+    },
+    {
+      name: "alt",
+      type: "`string`",
+      optional: true,
+      description: `The image's alternative text.`,
+    },
+    {
+      name: "size",
+      type: '`"small"` \\| `"base"`',
+      optional: true,
+      defaultValue: "base",
+      description: `The thumbnail's size.`,
+    },
+  ]}
+/>

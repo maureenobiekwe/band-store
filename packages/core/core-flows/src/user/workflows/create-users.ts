@@ -1,0 +1,120 @@
+import type { UserDTO, UserWorkflow } from "@band-store/framework/types"
+import { UserWorkflowEvents } from "@band-store/framework/utils"
+import {
+  WorkflowData,
+  WorkflowResponse,
+  createWorkflow,
+  transform,
+  when,
+} from "@band-store/framework/workflows-sdk"
+import { emitEventStep } from "../../common/steps/emit-event"
+import { createRoleAssignmentsStep } from "../../rbac/steps/create-role-assignments"
+import { validateActorRolePermissionsStep } from "../../rbac/steps/validate-actor-role-permissions"
+import { validateRolesExistStep } from "../../rbac/steps/validate-roles-exist"
+import {
+  buildRoleAssignments,
+  buildRoleScopePairs,
+} from "../../rbac/utils/build-role-assignments"
+import { createUsersStep } from "../steps"
+
+export const createUsersWorkflowId = "create-users-workflow"
+/**
+ * This workflow creates one or more users. It's used by other workflows, such
+ * as {@link acceptInviteWorkflow} to create a user for an invite.
+ *
+ * You can attach an auth identity to each user to allow the user to log in using the
+ * {@link setAuthAppMetadataStep}. Learn more about auth identities in
+ * this documentation.
+ *
+ * You can provide roles to be assigned to each user during creation. Each role
+ * can be constrained to one or more scopes, creating one role assignment per
+ * scope. When an `rbac_context` is provided, its actor can only assign roles
+ * whose policies it holds itself.
+ *
+ * You can use this workflow within your customizations or your own custom workflows, allowing you to
+ * create users within your custom flows.
+ *
+ * @example
+ * const { result } = await createUsersWorkflow(container)
+ * .run({
+ *   input: {
+ *     users: [{
+ *       email: "example@gmail.com",
+ *       first_name: "John",
+ *       last_name: "Doe",
+ *       roles: [
+ *         { role_id: "role_super_admin" },
+ *         {
+ *           role_id: "role_editor",
+ *           scopes: [{ type: "organization", id: "org_123" }]
+ *         }
+ *       ]
+ *     }]
+ *   }
+ * })
+ *
+ * @summary
+ *
+ * Create one or more users with optional role assignment.
+ */
+export const createUsersWorkflow = createWorkflow(
+  createUsersWorkflowId,
+  (
+    input: WorkflowData<UserWorkflow.CreateUsersWorkflowInputDTO>
+  ): WorkflowResponse<UserDTO[]> => {
+    const allRoleIds = transform({ input }, ({ input }) => {
+      const roleIds = new Set<string>()
+      input.users.forEach((user) => {
+        for (const role of user.roles || []) {
+          roleIds.add(role.role_id)
+        }
+      })
+      return Array.from(roleIds)
+    })
+
+    validateRolesExistStep(allRoleIds)
+
+    const roleAssignments = transform({ input }, ({ input }) => {
+      return input.users.flatMap((user) => buildRoleScopePairs(user.roles))
+    })
+
+    when(
+      { roleAssignments, input },
+      ({ roleAssignments, input }) =>
+        !!input.rbac_context?.actor_id && !!roleAssignments.length
+    ).then(() => {
+      validateActorRolePermissionsStep({
+        actor_id: input.rbac_context!.actor_id,
+        actor: input.rbac_context!.actor,
+        granting_scope: input.rbac_context!.scope,
+        assignments: roleAssignments,
+      })
+    })
+
+    const createdUsers = createUsersStep(input.users)
+
+    const userRoleAssignments = transform(
+      { input, createdUsers },
+      ({ input, createdUsers }) => {
+        return input.users.flatMap((user, index) =>
+          buildRoleAssignments(user.roles, "user", createdUsers[index].id)
+        )
+      }
+    )
+
+    createRoleAssignmentsStep(userRoleAssignments)
+
+    const userIdEvents = transform({ createdUsers }, ({ createdUsers }) => {
+      return createdUsers.map((v) => {
+        return { id: v.id }
+      })
+    })
+
+    emitEventStep({
+      eventName: UserWorkflowEvents.CREATED,
+      data: userIdEvents,
+    })
+
+    return new WorkflowResponse(createdUsers)
+  }
+)

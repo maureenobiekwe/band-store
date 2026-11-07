@@ -1,0 +1,26 @@
+{
+  "name": "@band-store/admin-shared",
+  "description": "Shared code for Band Store admin packages.",
+  "version": "2.22.4",
+  "author": "Kasper Kristensen <kasper@band-storejs.com>",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/band-storejs/band-store.git",
+    "directory": "packages/admin/admin-shared"
+  },
+  "bugs": {
+    "url": "https://github.com/band-storejs/band-store/issues"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "AGENTS.md"
+  ],
+  "scripts": {
+    "build": "yarn run -T tsup"
+  },
+  "packageManager": "yarn@4.18.1"
+}

@@ -1,0 +1,2338 @@
+{
+	"schemaVersion": "2.0",
+	"id": 19362,
+	"name": "tax-models",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"comment": {
+		"summary": [
+			{
+				"text": "## Relations Overview\n\n",
+				"kind": "text"
+			},
+			{
+				"text": "```mermaid\nerDiagram\n\tTaxRate ||--|| TaxRateRule : rules\n\tTaxRegion ||--|| TaxRegion : children\n\tTaxRegion ||--|| TaxRate : tax_rates\n\tTaxProvider ||--|| TaxRegion : regions\n\n```",
+				"kind": "code"
+			}
+		]
+	},
+	"children": [
+		{
+			"id": 19485,
+			"name": "TaxProvider",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "tax-provider.ts",
+					"line": 4,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-provider.ts#L4"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 19486,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 19487,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the tax provider."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-provider.ts",
+													"line": 5,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-provider.ts#L5"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19488,
+											"name": "is_enabled",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether the tax provider is enabled."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-provider.ts",
+													"line": 6,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-provider.ts#L6"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19489,
+											"name": "regions",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The regions that use this provider to calculate taxes."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-provider.ts",
+													"line": 7,
+													"character": 2,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-provider.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 19410,
+														"name": "TaxRegion"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												19487,
+												19488,
+												19489
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "TaxProvider"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 19460,
+			"name": "TaxRateRule",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "tax-rate-rule.ts",
+					"line": 4,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate-rule.ts#L4"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 19461,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 19462,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the tax rate rule."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate-rule.ts",
+													"line": 6,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate-rule.ts#L6"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19463,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Holds custom data in key-value pairs."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate-rule.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate-rule.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19464,
+											"name": "created_by",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the user that created the tax rate rule"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate-rule.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate-rule.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19465,
+											"name": "tax_rate",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated tax rate."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate-rule.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate-rule.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 19363,
+														"name": "TaxRate"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19483,
+											"name": "reference",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The name of the table this rule references."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "text",
+																"text": "product_type"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate-rule.ts",
+													"line": 12,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate-rule.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19484,
+											"name": "reference_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The id of a record in the table that this rule references."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "text",
+																"text": "ptyp_1"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate-rule.ts",
+													"line": 13,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate-rule.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												19462,
+												19463,
+												19464,
+												19465,
+												19483,
+												19484
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "TaxRateRule"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 19363,
+			"name": "TaxRate",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "tax-rate.ts",
+					"line": 5,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L5"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 19364,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 19365,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the tax rate."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 7,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L7"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19366,
+											"name": "rate",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The rate to charge."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "text",
+																"text": "10"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/float.ts",
+													"qualifiedName": "FloatProperty"
+												},
+												"name": "FloatProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19367,
+											"name": "code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The code the tax rate is identified by."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19368,
+											"name": "name",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The name of the tax rate"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19369,
+											"name": "is_default",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether this tax rate is the default in the tax region."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 11,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19370,
+											"name": "is_combinable",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether the tax rate should be combined with parent rates. Learn more in this documentation."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 12,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19371,
+											"name": "tax_region",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated tax region."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 13,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 19410,
+														"name": "TaxRegion"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19396,
+											"name": "rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 16,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 19460,
+														"name": "TaxRateRule"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19408,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Holds custom data in key-value pairs."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 19,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L19"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19409,
+											"name": "created_by",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the user that created the tax rate"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-rate.ts",
+													"line": 20,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-rate.ts#L20"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												19365,
+												19366,
+												19367,
+												19368,
+												19369,
+												19370,
+												19371,
+												19396,
+												19408,
+												19409
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "TaxRate"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 19410,
+			"name": "TaxRegion",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "tax-region.ts",
+					"line": 10,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L10"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 19411,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 19412,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the tax region."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-region.ts",
+													"line": 12,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19413,
+											"name": "country_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The country code of the tax region."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "text",
+																"text": "us"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-region.ts",
+													"line": 13,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19414,
+											"name": "province_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The province code of the tax region"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-region.ts",
+													"line": 14,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19415,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Holds custom data in key-value pairs."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-region.ts",
+													"line": 15,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19416,
+											"name": "created_by",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the user that created the tax region"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-region.ts",
+													"line": 16,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19417,
+											"name": "provider",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The provider that calculates taxes in this region."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-region.ts",
+													"line": 17,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L17"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 19485,
+														"name": "TaxProvider"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19434,
+											"name": "parent",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The tax region's parent."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-region.ts",
+													"line": 22,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L22"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 19410,
+														"name": "TaxRegion"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19439,
+											"name": "children",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The tax region's children.."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-region.ts",
+													"line": 27,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L27"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 19410,
+														"name": "TaxRegion"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 19442,
+											"name": "tax_rates",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated tax rates."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "tax-region.ts",
+													"line": 30,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/tax/src/models/tax-region.ts#L30"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 19363,
+														"name": "TaxRate"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												19412,
+												19413,
+												19414,
+												19415,
+												19416,
+												19417,
+												19434,
+												19439,
+												19442
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "TaxRegion"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		}
+	],
+	"groups": [
+		{
+			"title": "Variables",
+			"children": [
+				19485,
+				19460,
+				19363,
+				19410
+			]
+		}
+	],
+	"packageName": "@band-store/tax",
+	"symbolIdMap": {
+		"19362": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/index.ts",
+			"qualifiedName": ""
+		},
+		"19363": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "TaxRate"
+		},
+		"19364": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object"
+		},
+		"19365": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19366": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.rate"
+		},
+		"19367": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.code"
+		},
+		"19368": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.name"
+		},
+		"19369": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.is_default"
+		},
+		"19370": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.is_combinable"
+		},
+		"19371": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.tax_region"
+		},
+		"19372": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19373": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19374": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object"
+		},
+		"19375": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19376": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.country_code"
+		},
+		"19377": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.province_code"
+		},
+		"19378": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"19379": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.created_by"
+		},
+		"19380": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.provider"
+		},
+		"19381": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19382": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19383": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19384": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19385": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.parent"
+		},
+		"19386": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19387": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19388": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19389": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19390": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.children"
+		},
+		"19391": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19392": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19393": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.tax_rates"
+		},
+		"19394": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19395": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19396": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"19397": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19398": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19399": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"19400": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19401": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"19402": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.created_by"
+		},
+		"19403": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.tax_rate"
+		},
+		"19404": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"19405": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"19406": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.reference"
+		},
+		"19407": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.reference_id"
+		},
+		"19408": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"19409": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.created_by"
+		},
+		"19410": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "TaxRegion"
+		},
+		"19411": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object"
+		},
+		"19412": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19413": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.country_code"
+		},
+		"19414": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.province_code"
+		},
+		"19415": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"19416": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.created_by"
+		},
+		"19417": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.provider"
+		},
+		"19418": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19419": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19420": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object"
+		},
+		"19421": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19422": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object.is_enabled"
+		},
+		"19423": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object.regions"
+		},
+		"19424": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__function"
+		},
+		"19425": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__function"
+		},
+		"19426": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19427": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19428": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object"
+		},
+		"19429": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19430": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object.is_enabled"
+		},
+		"19431": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object.regions"
+		},
+		"19432": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__function"
+		},
+		"19433": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__function"
+		},
+		"19434": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.parent"
+		},
+		"19435": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19436": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19437": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19438": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19439": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.children"
+		},
+		"19440": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19441": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19442": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.tax_rates"
+		},
+		"19443": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19444": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19445": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object"
+		},
+		"19446": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19447": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.rate"
+		},
+		"19448": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.code"
+		},
+		"19449": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.name"
+		},
+		"19450": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.is_default"
+		},
+		"19451": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.is_combinable"
+		},
+		"19452": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.tax_region"
+		},
+		"19453": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19454": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19455": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"19456": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19457": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19458": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"19459": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.created_by"
+		},
+		"19460": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "TaxRateRule"
+		},
+		"19461": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"19462": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19463": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"19464": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.created_by"
+		},
+		"19465": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.tax_rate"
+		},
+		"19466": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"19467": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"19468": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object"
+		},
+		"19469": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19470": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.rate"
+		},
+		"19471": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.code"
+		},
+		"19472": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.name"
+		},
+		"19473": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.is_default"
+		},
+		"19474": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.is_combinable"
+		},
+		"19475": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.tax_region"
+		},
+		"19476": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19477": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19478": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"19479": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19480": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__function"
+		},
+		"19481": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"19482": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate.ts",
+			"qualifiedName": "__object.created_by"
+		},
+		"19483": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.reference"
+		},
+		"19484": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-rate-rule.ts",
+			"qualifiedName": "__object.reference_id"
+		},
+		"19485": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "TaxProvider"
+		},
+		"19486": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object"
+		},
+		"19487": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19488": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object.is_enabled"
+		},
+		"19489": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__object.regions"
+		},
+		"19490": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__function"
+		},
+		"19491": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-provider.ts",
+			"qualifiedName": "__function"
+		},
+		"19492": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object"
+		},
+		"19493": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.id"
+		},
+		"19494": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.country_code"
+		},
+		"19495": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.province_code"
+		},
+		"19496": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"19497": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.created_by"
+		},
+		"19498": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.provider"
+		},
+		"19499": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19500": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19501": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19502": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19503": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.parent"
+		},
+		"19504": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19505": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19506": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19507": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19508": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.children"
+		},
+		"19509": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19510": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19511": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__object.tax_rates"
+		},
+		"19512": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		},
+		"19513": {
+			"packageName": "@band-store/tax",
+			"packagePath": "src/models/tax-region.ts",
+			"qualifiedName": "__function"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/modules/tax/src/models/index.ts"
+		},
+		"reflections": {
+			"1": 19362
+		}
+	}
+}

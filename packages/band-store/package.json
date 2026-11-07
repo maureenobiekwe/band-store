@@ -1,0 +1,148 @@
+{
+  "name": "@band-store/band-store",
+  "version": "2.22.4",
+  "description": "Building blocks for digital commerce",
+  "main": "dist/index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./dist/index.js",
+    "./types": "./dist/types/index.js",
+    "./utils": "./dist/utils/index.js",
+    "./api/*": "./dist/api/*.js",
+    "./subscribers/*": "./dist/subscribers/*.js",
+    "./jobs/*": "./dist/jobs/*.js",
+    "./core-flows": "./dist/core-flows/index.js",
+    "./loaders/*": "./dist/loaders/*.js",
+    "./commands/*": "./dist/commands/*.js",
+    "./feature-flags/*": "./dist/feature-flags/*.js",
+    "./*": "./dist/modules/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/band-storejs/band-store.git",
+    "directory": "packages/band-store"
+  },
+  "bugs": {
+    "url": "https://github.com/band-storejs/band-store/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "oas",
+    "AGENTS.md",
+    "!dist/**/__tests__",
+    "!dist/**/__mocks__",
+    "!dist/**/__fixtures__"
+  ],
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "author": "Sebastian Rindom",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "watch": "yarn run -T tsc --build --watch",
+    "build": "yarn run -T rimraf dist && yarn run -T tsc --build",
+    "serve": "node dist/app.js",
+    "test": "../../node_modules/.bin/jest --bail --forceExit --testPathIgnorePatterns='/integration-tests/' --testPathPatterns=src",
+    "test:integration": "../../node_modules/.bin/jest --passWithNoTests --forceExit --testPathPatterns=\"src/.*/integration-tests/__tests__/.*\\.ts\""
+  },
+  "devDependencies": {
+    "@band-store/framework": "2.22.4"
+  },
+  "dependencies": {
+    "@band-store/admin-bundler": "2.22.4",
+    "@band-store/analytics": "2.22.4",
+    "@band-store/analytics-local": "2.22.4",
+    "@band-store/analytics-posthog": "2.22.4",
+    "@band-store/api-key": "2.22.4",
+    "@band-store/auth": "2.22.4",
+    "@band-store/auth-emailpass": "2.22.4",
+    "@band-store/auth-github": "2.22.4",
+    "@band-store/auth-google": "2.22.4",
+    "@band-store/auth-oidc": "2.22.4",
+    "@band-store/cache-inmemory": "2.22.4",
+    "@band-store/cache-redis": "2.22.4",
+    "@band-store/caching": "2.22.4",
+    "@band-store/caching-redis": "2.22.4",
+    "@band-store/cart": "2.22.4",
+    "@band-store/core-flows": "2.22.4",
+    "@band-store/currency": "2.22.4",
+    "@band-store/customer": "2.22.4",
+    "@band-store/draft-order": "2.22.4",
+    "@band-store/event-bus-local": "2.22.4",
+    "@band-store/event-bus-redis": "2.22.4",
+    "@band-store/file": "2.22.4",
+    "@band-store/file-local": "2.22.4",
+    "@band-store/file-s3": "2.22.4",
+    "@band-store/fulfillment": "2.22.4",
+    "@band-store/fulfillment-manual": "2.22.4",
+    "@band-store/index": "2.22.4",
+    "@band-store/inventory": "2.22.4",
+    "@band-store/link-modules": "2.22.4",
+    "@band-store/locking": "2.22.4",
+    "@band-store/locking-postgres": "2.22.4",
+    "@band-store/locking-redis": "2.22.4",
+    "@band-store/notification": "2.22.4",
+    "@band-store/notification-local": "2.22.4",
+    "@band-store/notification-sendgrid": "2.22.4",
+    "@band-store/order": "2.22.4",
+    "@band-store/payment": "2.22.4",
+    "@band-store/payment-adyen": "2.22.4",
+    "@band-store/payment-stripe": "2.22.4",
+    "@band-store/pricing": "2.22.4",
+    "@band-store/product": "2.22.4",
+    "@band-store/promotion": "2.22.4",
+    "@band-store/rbac": "2.22.4",
+    "@band-store/region": "2.22.4",
+    "@band-store/sales-channel": "2.22.4",
+    "@band-store/search": "2.22.4",
+    "@band-store/search-postgres": "2.22.4",
+    "@band-store/settings": "2.22.4",
+    "@band-store/stock-location": "2.22.4",
+    "@band-store/store": "2.22.4",
+    "@band-store/tax": "2.22.4",
+    "@band-store/telemetry": "2.22.4",
+    "@band-store/translation": "2.22.4",
+    "@band-store/user": "2.22.4",
+    "@band-store/workflow-engine-inmemory": "2.22.4",
+    "@band-store/workflow-engine-redis": "2.22.4",
+    "@inquirer/checkbox": "^5.2.7",
+    "@inquirer/confirm": "^6.3.4",
+    "@inquirer/input": "^5.1.8",
+    "boxen": "^9.0.0",
+    "chokidar": "^6.0.0",
+    "compression": "^1.8.2",
+    "express": "^4.21.0",
+    "fs-exists-cached": "^1.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.5.0",
+    "node-schedule": "^2.1.1",
+    "qs": "^6.16.1",
+    "request-ip": "^3.3.0",
+    "slugify": "^1.6.6"
+  },
+  "peerDependencies": {
+    "@band-store/framework": "2.22.4",
+    "@swc/core": "^1.7.28",
+    "posthog-node": "^5.57.0",
+    "react-dom": "^18.3.1",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "peerDependenciesMeta": {
+    "@swc/core": {
+      "optional": true
+    },
+    "posthog-node": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "yalc": {
+      "optional": true
+    }
+  },
+  "gitHead": "cd1f5afa5aa8c0b15ea957008ee19f1d695cbd2e"
+}

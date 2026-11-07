@@ -1,0 +1,5769 @@
+{
+	"schemaVersion": "2.0",
+	"id": 15539,
+	"name": "promotion-models",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"comment": {
+		"summary": [
+			{
+				"text": "## Relations Overview\n\n",
+				"kind": "text"
+			},
+			{
+				"text": "```mermaid\nerDiagram\n\tApplicationMethod }|--|{ PromotionRule : target_rules\n\tCampaign ||--|| CampaignBudget : budget\n\tCampaign ||--|| Promotion : promotions\n\tCampaignBudget ||--|| CampaignBudgetUsage : usages\n\tPromotion ||--|| ApplicationMethod : application_method\n\tPromotion }|--|{ PromotionRule : rules\n\tPromotionRule ||--|| PromotionRuleValue : values\n\n```",
+				"kind": "code"
+			}
+		]
+	},
+	"children": [
+		{
+			"id": 15540,
+			"name": "ApplicationMethod",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "application-method.ts",
+					"line": 5,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L5"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 15541,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 15542,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the application method."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 9,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15543,
+											"name": "value",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The value of the application method"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 10,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/big-number.ts",
+													"qualifiedName": "BigNumberProperty"
+												},
+												"name": "BigNumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15544,
+											"name": "currency_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The currency code of the application method."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "text",
+																"text": "usd"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 11,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15545,
+											"name": "max_quantity",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The max quantity allowed in the cart for the associated promotion to be applied."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 12,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/number.ts",
+													"qualifiedName": "NumberProperty"
+												},
+												"name": "NumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15546,
+											"name": "apply_to_quantity",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The quantity that results from matching the `buyget` promotion's condition. For example, if the promotion is a \"Buy 2 shirts get 1 free\", the value of this attribute is `1`."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 13,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/number.ts",
+													"qualifiedName": "NumberProperty"
+												},
+												"name": "NumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15547,
+											"name": "buy_rules_min_quantity",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The minimum quantity required for a `buyget` promotion to be applied. For example, if the promotion is a \"Buy 2 shirts get 1 free\", the value of this attribute is `2`."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 14,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/number.ts",
+													"qualifiedName": "NumberProperty"
+												},
+												"name": "NumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15548,
+											"name": "type",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The application method's type. If it's `fixed`, the promotion discounts a fixed amount. If it's `percentage`, the promotion discounts a percentage."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 15,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"packageName": "@band-store/utils",
+																"packagePath": "src/promotion/index.ts",
+																"qualifiedName": "ApplicationMethodType"
+															},
+															"name": "ApplicationMethodType",
+															"package": "@band-store/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15549,
+											"name": "target_type",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Which item does the promotion apply to. `items` mean the promotion applies to the cart's items; `shipping_methods` means the promotion applies to the cart's shipping methods; `order` means the promotion applies on the entire order."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 18,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L18"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"packageName": "@band-store/utils",
+																"packagePath": "src/promotion/index.ts",
+																"qualifiedName": "ApplicationMethodTargetType"
+															},
+															"name": "ApplicationMethodTargetType",
+															"package": "@band-store/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15550,
+											"name": "allocation",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "How is the promotion amount discounted. `each` means the discounted amount is applied on each applicable item; `across` means the discounted amount is split accross the applicable items."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 21,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L21"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"packageName": "@band-store/utils",
+																"packagePath": "src/promotion/index.ts",
+																"qualifiedName": "ApplicationMethodAllocation"
+															},
+															"name": "ApplicationMethodAllocation",
+															"package": "@band-store/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15551,
+											"name": "promotion",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated promotion."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 25,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L25"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15745,
+														"name": "Promotion"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15577,
+											"name": "target_rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated target rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 28,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L28"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15867,
+														"name": "PromotionRule"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15600,
+											"name": "buy_rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated buy rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "application-method.ts",
+													"line": 32,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L32"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15867,
+														"name": "PromotionRule"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												15542,
+												15543,
+												15544,
+												15545,
+												15546,
+												15547,
+												15548,
+												15549,
+												15550,
+												15551,
+												15577,
+												15600
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 15623,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 15624,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "application-method.ts",
+											"line": 7,
+											"character": 6,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "ApplicationMethod"
+									},
+									"defaultValue": "\"ApplicationMethod\""
+								},
+								{
+									"id": 15625,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "application-method.ts",
+											"line": 7,
+											"character": 33,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/application-method.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_application_method"
+									},
+									"defaultValue": "\"promotion_application_method\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										15624,
+										15625
+									]
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 15994,
+			"name": "CampaignBudgetUsage",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"comment": {
+				"summary": [],
+				"blockTags": [
+					{
+						"tag": "@since",
+						"content": [
+							{
+								"kind": "text",
+								"text": "2.11.0"
+							}
+						]
+					},
+					{
+						"tag": "@since",
+						"content": [
+							{
+								"kind": "text",
+								"text": "2.11.0"
+							}
+						]
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "campaign-budget-usage.ts",
+					"line": 7,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget-usage.ts#L7"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 15995,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 15996,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the campaign budget usage."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget-usage.ts",
+													"line": 14,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget-usage.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15997,
+											"name": "attribute_value",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The attribute value of the campaign budget usage"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget-usage.ts",
+													"line": 15,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget-usage.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15998,
+											"name": "used",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The used of the campaign budget usage"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget-usage.ts",
+													"line": 16,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget-usage.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/big-number.ts",
+													"qualifiedName": "BigNumberProperty"
+												},
+												"name": "BigNumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15999,
+											"name": "budget",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated budget."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget-usage.ts",
+													"line": 17,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget-usage.ts#L17"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15700,
+														"name": "CampaignBudget"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												15996,
+												15997,
+												15998,
+												15999
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 16018,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 16019,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign-budget-usage.ts",
+											"line": 10,
+											"character": 6,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget-usage.ts#L10"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "CampaignBudgetUsage"
+									},
+									"defaultValue": "\"CampaignBudgetUsage\""
+								},
+								{
+									"id": 16020,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign-budget-usage.ts",
+											"line": 11,
+											"character": 6,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget-usage.ts#L11"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_campaign_budget_usage"
+									},
+									"defaultValue": "\"promotion_campaign_budget_usage\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										16019,
+										16020
+									]
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 15700,
+			"name": "CampaignBudget",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "campaign-budget.ts",
+					"line": 5,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L5"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 15701,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 15702,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the campaign budget."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 9,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15703,
+											"name": "type",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The type of the campaign budget"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 10,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"packageName": "@band-store/utils",
+																"packagePath": "src/promotion/index.ts",
+																"qualifiedName": "CampaignBudgetType"
+															},
+															"name": "CampaignBudgetType",
+															"package": "@band-store/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15704,
+											"name": "currency_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The currency code of the campaign budget."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "text",
+																"text": "usd"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 13,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15705,
+											"name": "limit",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The limit of the campaign budget"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 14,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/big-number.ts",
+													"qualifiedName": "BigNumberProperty"
+												},
+												"name": "BigNumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15706,
+											"name": "used",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "How much of the budget has been used. if the `limit` is `spend`, this property holds the total amount discounted so far. if the `limit` is `usage`, it holds the number of times the campaign's promotions have been used so far."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 15,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/big-number.ts",
+													"qualifiedName": "BigNumberProperty"
+												},
+												"name": "BigNumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15707,
+											"name": "campaign",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated campaign."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 16,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15626,
+														"name": "Campaign"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15728,
+											"name": "attribute",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The attribute of the campaign budget"
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@since",
+														"content": [
+															{
+																"kind": "text",
+																"text": "2.11.0"
+															}
+														]
+													},
+													{
+														"tag": "@since",
+														"content": [
+															{
+																"kind": "text",
+																"text": "2.11.0"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 23,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L23"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15729,
+											"name": "usages",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated usages."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@since",
+														"content": [
+															{
+																"kind": "text",
+																"text": "2.11.0"
+															}
+														]
+													},
+													{
+														"tag": "@since",
+														"content": [
+															{
+																"kind": "text",
+																"text": "2.11.0"
+															}
+														]
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign-budget.ts",
+													"line": 29,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L29"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15994,
+														"name": "CampaignBudgetUsage"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												15702,
+												15703,
+												15704,
+												15705,
+												15706,
+												15707,
+												15728,
+												15729
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 15742,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 15743,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign-budget.ts",
+											"line": 7,
+											"character": 6,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "CampaignBudget"
+									},
+									"defaultValue": "\"CampaignBudget\""
+								},
+								{
+									"id": 15744,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign-budget.ts",
+											"line": 7,
+											"character": 30,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign-budget.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_campaign_budget"
+									},
+									"defaultValue": "\"promotion_campaign_budget\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										15743,
+										15744
+									]
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 15626,
+			"name": "Campaign",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "campaign.ts",
+					"line": 5,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L5"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 15627,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 15628,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the campaign."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 9,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15629,
+											"name": "name",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The name of the campaign"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 10,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15630,
+											"name": "description",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The description of the campaign"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 11,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15631,
+											"name": "campaign_identifier",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The campaign's identifier, such as a Google Tag ID."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 12,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15632,
+											"name": "starts_at",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The date that the campaign starts."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 13,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/date-time.ts",
+													"qualifiedName": "DateTimeProperty"
+												},
+												"name": "DateTimeProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15633,
+											"name": "ends_at",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The date that the campaign ends."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 14,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/date-time.ts",
+													"qualifiedName": "DateTimeProperty"
+												},
+												"name": "DateTimeProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15634,
+											"name": "budget",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated budget."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 15,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-one.ts",
+													"qualifiedName": "HasOne"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15700,
+														"name": "CampaignBudget"
+													}
+												],
+												"name": "HasOne",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15671,
+											"name": "promotions",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated promotions."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "campaign.ts",
+													"line": 20,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L20"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15745,
+														"name": "Promotion"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												15628,
+												15629,
+												15630,
+												15631,
+												15632,
+												15633,
+												15634,
+												15671
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 15697,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 15698,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign.ts",
+											"line": 7,
+											"character": 6,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "Campaign"
+									},
+									"defaultValue": "\"Campaign\""
+								},
+								{
+									"id": 15699,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "campaign.ts",
+											"line": 7,
+											"character": 24,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/campaign.ts#L7"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_campaign"
+									},
+									"defaultValue": "\"promotion_campaign\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										15698,
+										15699
+									]
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 15964,
+			"name": "PromotionRuleValue",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "promotion-rule-value.ts",
+					"line": 4,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule-value.ts#L4"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 15965,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 15966,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the promotion rule value."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule-value.ts",
+													"line": 8,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule-value.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15967,
+											"name": "value",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The value of the promotion rule."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule-value.ts",
+													"line": 9,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule-value.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15968,
+											"name": "promotion_rule",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated promotion rule."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule-value.ts",
+													"line": 10,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule-value.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15867,
+														"name": "PromotionRule"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												15966,
+												15967,
+												15968
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 15991,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 15992,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "promotion-rule-value.ts",
+											"line": 6,
+											"character": 6,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule-value.ts#L6"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "PromotionRuleValue"
+									},
+									"defaultValue": "\"PromotionRuleValue\""
+								},
+								{
+									"id": 15993,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "promotion-rule-value.ts",
+											"line": 6,
+											"character": 34,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule-value.ts#L6"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_rule_value"
+									},
+									"defaultValue": "\"promotion_rule_value\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										15992,
+										15993
+									]
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 15867,
+			"name": "PromotionRule",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "promotion-rule.ts",
+					"line": 6,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L6"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 15868,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 15869,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the promotion rule."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 13,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15870,
+											"name": "description",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The description of the promotion rule"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 14,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15871,
+											"name": "attribute",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The attribute of the promotion rule."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "text",
+																"text": "customer_group_id"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 15,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15872,
+											"name": "operator",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The operator of the promotion rule."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "text",
+																"text": "in"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 16,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"packageName": "@band-store/utils",
+																"packagePath": "src/promotion/index.ts",
+																"qualifiedName": "PromotionRuleOperator"
+															},
+															"name": "PromotionRuleOperator",
+															"package": "@band-store/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15873,
+											"name": "values",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated values."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 19,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L19"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15964,
+														"name": "PromotionRuleValue"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15885,
+											"name": "promotions",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated promotions."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 22,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L22"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15745,
+														"name": "Promotion"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15911,
+											"name": "method_target_rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated method target rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 25,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L25"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15540,
+														"name": "ApplicationMethod"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15936,
+											"name": "method_buy_rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated method buy rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion-rule.ts",
+													"line": 28,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L28"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15540,
+														"name": "ApplicationMethod"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												15869,
+												15870,
+												15871,
+												15872,
+												15873,
+												15885,
+												15911,
+												15936
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 15961,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 15962,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "promotion-rule.ts",
+											"line": 9,
+											"character": 6,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L9"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "PromotionRule"
+									},
+									"defaultValue": "\"PromotionRule\""
+								},
+								{
+									"id": 15963,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "promotion-rule.ts",
+											"line": 10,
+											"character": 6,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion-rule.ts#L10"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "promotion_rule"
+									},
+									"defaultValue": "\"promotion_rule\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										15962,
+										15963
+									]
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 15745,
+			"name": "Promotion",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "promotion.ts",
+					"line": 6,
+					"character": 6,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L6"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 15746,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 15747,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The ID of the promotion."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15748,
+											"name": "code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The code of the promotion"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 9,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15749,
+											"name": "is_automatic",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether the promotion is applied automatic. If disabled, the customer must enter the code during checkout."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15750,
+											"name": "is_tax_inclusive",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Whether the promotion is tax inclusive."
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 11,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/boolean.ts",
+													"qualifiedName": "BooleanProperty"
+												},
+												"name": "BooleanProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15751,
+											"name": "limit",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The limit of the promotion\n\n@since v2.12.0"
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@since",
+														"content": [
+															{
+																"kind": "text",
+																"text": "2.12.0"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 15,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L15"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/number.ts",
+													"qualifiedName": "NumberProperty"
+												},
+												"name": "NumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15752,
+											"name": "used",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "How much of the limit has been used.\n\n@since v2.12.0"
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@since",
+														"content": [
+															{
+																"kind": "text",
+																"text": "2.12.0"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 19,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L19"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/number.ts",
+													"qualifiedName": "NumberProperty"
+												},
+												"name": "NumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15753,
+											"name": "type",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The type of the promotion"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 20,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L20"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"packageName": "@band-store/utils",
+																"packagePath": "src/promotion/index.ts",
+																"qualifiedName": "PromotionType"
+															},
+															"name": "PromotionType",
+															"package": "@band-store/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15754,
+											"name": "status",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The status of the promotion"
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 21,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L21"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"packageName": "@band-store/utils",
+																"packagePath": "src/promotion/index.ts",
+																"qualifiedName": "PromotionStatus"
+															},
+															"name": "PromotionStatus",
+															"package": "@band-store/utils",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15755,
+											"name": "campaign",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated campaign."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 25,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L25"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15626,
+														"name": "Campaign"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15794,
+											"name": "application_method",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated application method."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 30,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L30"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-one.ts",
+													"qualifiedName": "HasOne"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15540,
+														"name": "ApplicationMethod"
+													}
+												],
+												"name": "HasOne",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15843,
+											"name": "rules",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The associated rules."
+													}
+												],
+												"modifierTags": [
+													"@expandable"
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 35,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L35"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/many-to-many.ts",
+													"qualifiedName": "ManyToMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 15867,
+														"name": "PromotionRule"
+													}
+												],
+												"name": "ManyToMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 15866,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Holds custom data in key-value pairs.\n\n@since v2.12.0"
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@since",
+														"content": [
+															{
+																"kind": "text",
+																"text": "2.12.0"
+															}
+														]
+													}
+												]
+											},
+											"sources": [
+												{
+													"fileName": "promotion.ts",
+													"line": 42,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/modules/promotion/src/models/promotion.ts#L42"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												15747,
+												15748,
+												15749,
+												15750,
+												15751,
+												15752,
+												15753,
+												15754,
+												15755,
+												15794,
+												15843,
+												15866
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "literal",
+						"value": "Promotion"
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			},
+			"defaultValue": "..."
+		}
+	],
+	"groups": [
+		{
+			"title": "Variables",
+			"children": [
+				15540,
+				15994,
+				15700,
+				15626,
+				15964,
+				15867,
+				15745
+			]
+		}
+	],
+	"packageName": "@band-store/promotion",
+	"symbolIdMap": {
+		"15539": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/index.ts",
+			"qualifiedName": ""
+		},
+		"15540": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "ApplicationMethod"
+		},
+		"15541": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15542": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15543": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"15544": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"15545": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"15546": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"15547": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"15548": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15549": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"15550": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"15551": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"15552": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15553": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15554": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object"
+		},
+		"15555": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15556": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.code"
+		},
+		"15557": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.is_automatic"
+		},
+		"15558": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.is_tax_inclusive"
+		},
+		"15559": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"15560": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.used"
+		},
+		"15561": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15562": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.status"
+		},
+		"15563": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"15564": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15565": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15566": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15567": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15568": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.application_method"
+		},
+		"15569": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15570": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15571": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15572": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15573": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"15574": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15575": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15576": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"15577": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"15578": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15579": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15580": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15581": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15582": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"15583": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"15584": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"15585": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"15586": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15587": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15588": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"15589": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15590": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15591": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"15592": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15593": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15594": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"15595": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15596": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15597": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15598": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15599": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15600": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"15601": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15602": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15603": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15604": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15605": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"15606": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"15607": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"15608": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"15609": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15610": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15611": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"15612": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15613": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15614": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"15615": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15616": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15617": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"15618": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15619": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15620": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15621": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15622": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15623": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15624": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15625": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15626": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "Campaign"
+		},
+		"15627": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"15628": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15629": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15630": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.description"
+		},
+		"15631": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.campaign_identifier"
+		},
+		"15632": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.starts_at"
+		},
+		"15633": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.ends_at"
+		},
+		"15634": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"15635": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15636": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15637": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"15638": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15639": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15640": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"15641": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"15642": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.used"
+		},
+		"15643": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"15644": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15645": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15646": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"15647": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.usages"
+		},
+		"15648": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15649": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15650": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"15651": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15652": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15653": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15654": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15655": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"15656": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15657": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15658": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"15659": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"15660": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.used"
+		},
+		"15661": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"15662": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15663": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15664": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"15665": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.usages"
+		},
+		"15666": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15667": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15668": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"15669": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15670": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15671": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"15672": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"15673": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"15674": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object"
+		},
+		"15675": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15676": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.code"
+		},
+		"15677": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.is_automatic"
+		},
+		"15678": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.is_tax_inclusive"
+		},
+		"15679": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"15680": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.used"
+		},
+		"15681": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15682": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.status"
+		},
+		"15683": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"15684": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15685": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15686": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15687": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15688": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.application_method"
+		},
+		"15689": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15690": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15691": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15692": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15693": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"15694": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15695": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15696": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"15697": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"15698": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15699": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15700": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "CampaignBudget"
+		},
+		"15701": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"15702": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15703": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15704": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"15705": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"15706": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.used"
+		},
+		"15707": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"15708": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15709": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15710": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"15711": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15712": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15713": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.description"
+		},
+		"15714": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.campaign_identifier"
+		},
+		"15715": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.starts_at"
+		},
+		"15716": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.ends_at"
+		},
+		"15717": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"15718": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15719": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15720": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15721": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15722": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"15723": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"15724": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"15725": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"15726": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15727": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15728": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"15729": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.usages"
+		},
+		"15730": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15731": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"15732": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object"
+		},
+		"15733": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15734": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.attribute_value"
+		},
+		"15735": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.used"
+		},
+		"15736": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"15737": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__function"
+		},
+		"15738": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__function"
+		},
+		"15739": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object"
+		},
+		"15740": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15741": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15742": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"15743": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15744": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15745": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "Promotion"
+		},
+		"15746": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object"
+		},
+		"15747": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15748": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.code"
+		},
+		"15749": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.is_automatic"
+		},
+		"15750": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.is_tax_inclusive"
+		},
+		"15751": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"15752": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.used"
+		},
+		"15753": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15754": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.status"
+		},
+		"15755": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"15756": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15757": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15758": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"15759": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15760": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15761": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.description"
+		},
+		"15762": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.campaign_identifier"
+		},
+		"15763": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.starts_at"
+		},
+		"15764": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.ends_at"
+		},
+		"15765": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"15766": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15767": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15768": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15769": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15770": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"15771": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"15772": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"15773": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"15774": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15775": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15776": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15777": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15778": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"15779": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15780": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15781": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.description"
+		},
+		"15782": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.campaign_identifier"
+		},
+		"15783": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.starts_at"
+		},
+		"15784": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.ends_at"
+		},
+		"15785": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"15786": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15787": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__type"
+		},
+		"15788": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"15789": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"15790": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__function"
+		},
+		"15791": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object"
+		},
+		"15792": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15793": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15794": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.application_method"
+		},
+		"15795": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15796": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15797": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15798": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15799": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"15800": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"15801": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"15802": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"15803": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"15804": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15805": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"15806": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"15807": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"15808": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15809": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15810": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"15811": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15812": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15813": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"15814": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15815": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15816": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15817": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15818": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15819": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15820": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15821": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15822": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15823": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"15824": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"15825": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"15826": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"15827": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"15828": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15829": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"15830": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"15831": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"15832": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15833": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15834": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"15835": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15836": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15837": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"15838": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15839": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15840": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15841": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15842": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15843": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"15844": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15845": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15846": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15847": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15848": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"15849": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"15850": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"15851": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"15852": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15853": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15854": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"15855": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15856": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15857": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"15858": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15859": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15860": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"15861": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15862": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15863": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15864": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15865": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15866": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"15867": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "PromotionRule"
+		},
+		"15868": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15869": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15870": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"15871": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"15872": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"15873": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"15874": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15875": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15876": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object"
+		},
+		"15877": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15878": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.value"
+		},
+		"15879": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.promotion_rule"
+		},
+		"15880": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__function"
+		},
+		"15881": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__function"
+		},
+		"15882": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object"
+		},
+		"15883": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15884": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15885": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"15886": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15887": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15888": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object"
+		},
+		"15889": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15890": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.code"
+		},
+		"15891": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.is_automatic"
+		},
+		"15892": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.is_tax_inclusive"
+		},
+		"15893": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"15894": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.used"
+		},
+		"15895": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15896": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.status"
+		},
+		"15897": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"15898": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15899": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15900": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15901": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__function"
+		},
+		"15902": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.application_method"
+		},
+		"15903": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15904": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15905": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15906": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15907": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.rules"
+		},
+		"15908": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15909": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__type"
+		},
+		"15910": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"15911": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"15912": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15913": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15914": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15915": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15916": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"15917": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"15918": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"15919": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"15920": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"15921": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15922": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"15923": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"15924": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"15925": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15926": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15927": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"15928": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15929": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15930": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"15931": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15932": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15933": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15934": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15935": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15936": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"15937": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15938": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15939": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15940": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15941": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.value"
+		},
+		"15942": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"15943": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.max_quantity"
+		},
+		"15944": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.apply_to_quantity"
+		},
+		"15945": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules_min_quantity"
+		},
+		"15946": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.type"
+		},
+		"15947": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_type"
+		},
+		"15948": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.allocation"
+		},
+		"15949": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.promotion"
+		},
+		"15950": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15951": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15952": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.target_rules"
+		},
+		"15953": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15954": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15955": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.buy_rules"
+		},
+		"15956": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15957": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__function"
+		},
+		"15958": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object"
+		},
+		"15959": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15960": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/application-method.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15961": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15962": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15963": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15964": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "PromotionRuleValue"
+		},
+		"15965": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object"
+		},
+		"15966": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15967": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.value"
+		},
+		"15968": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.promotion_rule"
+		},
+		"15969": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__function"
+		},
+		"15970": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__function"
+		},
+		"15971": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15972": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15973": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.description"
+		},
+		"15974": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"15975": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.operator"
+		},
+		"15976": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.values"
+		},
+		"15977": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15978": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15979": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.promotions"
+		},
+		"15980": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15981": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15982": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_target_rules"
+		},
+		"15983": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15984": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15985": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.method_buy_rules"
+		},
+		"15986": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15987": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__function"
+		},
+		"15988": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object"
+		},
+		"15989": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15990": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15991": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object"
+		},
+		"15992": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.name"
+		},
+		"15993": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/promotion-rule-value.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"15994": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "CampaignBudgetUsage"
+		},
+		"15995": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object"
+		},
+		"15996": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.id"
+		},
+		"15997": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.attribute_value"
+		},
+		"15998": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.used"
+		},
+		"15999": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.budget"
+		},
+		"16000": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__function"
+		},
+		"16001": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__function"
+		},
+		"16002": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"16003": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.id"
+		},
+		"16004": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.type"
+		},
+		"16005": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"16006": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.limit"
+		},
+		"16007": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.used"
+		},
+		"16008": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.campaign"
+		},
+		"16009": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"16010": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"16011": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.attribute"
+		},
+		"16012": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.usages"
+		},
+		"16013": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"16014": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__function"
+		},
+		"16015": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object"
+		},
+		"16016": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.name"
+		},
+		"16017": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"16018": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object"
+		},
+		"16019": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.name"
+		},
+		"16020": {
+			"packageName": "@band-store/promotion",
+			"packagePath": "src/models/campaign-budget-usage.ts",
+			"qualifiedName": "__object.tableName"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/modules/promotion/src/models/index.ts"
+		},
+		"reflections": {
+			"1": 15539
+		}
+	}
+}

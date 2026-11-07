@@ -1,0 +1,41 @@
+{
+  "name": "@band-store/event-bus-local",
+  "version": "2.22.4",
+  "description": "Local Event Bus Module for Band Store",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "AGENTS.md",
+    "!dist/**/__tests__",
+    "!dist/**/__mocks__",
+    "!dist/**/__fixtures__"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/band-storejs/band-store.git",
+    "directory": "packages/modules/event-bus-local"
+  },
+  "bugs": {
+    "url": "https://github.com/band-storejs/band-store/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "author": "band-store",
+  "license": "MIT",
+  "devDependencies": {
+    "@band-store/framework": "2.22.4"
+  },
+  "scripts": {
+    "watch": "yarn run -T tsc --build --watch",
+    "build": "yarn run -T rimraf dist && yarn run -T tsc --build",
+    "test": "../../../node_modules/.bin/jest --passWithNoTests --testPathPatterns=src",
+    "test:integration": "../../../node_modules/.bin/jest --passWithNoTests --no-cache --bail --detectOpenHandles --forceExit --logHeapUsage --testPathPatterns=\"integration-tests/__tests__/.*\\.spec\\.ts\""
+  },
+  "peerDependencies": {
+    "@band-store/framework": "2.22.4"
+  }
+}

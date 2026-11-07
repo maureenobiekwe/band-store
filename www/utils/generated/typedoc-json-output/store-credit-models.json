@@ -1,0 +1,1073 @@
+{
+	"schemaVersion": "2.0",
+	"id": 68135,
+	"name": "store-credit-models",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"comment": {
+		"summary": [
+			{
+				"text": "## Relations Overview\n\n",
+				"kind": "text"
+			},
+			{
+				"text": "```mermaid\nerDiagram\n\tStoreCreditAccount ||--|| AccountTransaction : transactions\n\n```",
+				"kind": "code"
+			}
+		]
+	},
+	"children": [
+		{
+			"id": 68136,
+			"name": "AccountTransaction",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "account-transaction.ts",
+					"line": 5,
+					"character": 0,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L5"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 68137,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 68138,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "account-transaction.ts",
+													"line": 8,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68139,
+											"name": "amount",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "account-transaction.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/big-number.ts",
+													"qualifiedName": "BigNumberProperty"
+												},
+												"name": "BigNumberProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68140,
+											"name": "type",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "account-transaction.ts",
+													"line": 11,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/enum.ts",
+													"qualifiedName": "EnumProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "query",
+														"queryType": {
+															"type": "reference",
+															"target": {
+																"packageName": "@band-store/loyalty-plugin",
+																"packagePath": "src/types/store-credit/module.ts",
+																"qualifiedName": "TransactionType"
+															},
+															"name": "TransactionType",
+															"package": "@band-store/loyalty-plugin",
+															"preferValues": true
+														}
+													}
+												],
+												"name": "EnumProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68141,
+											"name": "reference",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "account-transaction.ts",
+													"line": 12,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68142,
+											"name": "reference_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "account-transaction.ts",
+													"line": 13,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L13"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68143,
+											"name": "note",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "account-transaction.ts",
+													"line": 14,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68144,
+											"name": "account",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "account-transaction.ts",
+													"line": 16,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L16"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/belongs-to.ts",
+													"qualifiedName": "BelongsTo"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 68163,
+														"name": "StoreCreditAccount"
+													}
+												],
+												"name": "BelongsTo",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68159,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "account-transaction.ts",
+													"line": 20,
+													"character": 4,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L20"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												68138,
+												68139,
+												68140,
+												68141,
+												68142,
+												68143,
+												68144,
+												68159
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 68160,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 68161,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "account-transaction.ts",
+											"line": 6,
+											"character": 4,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L6"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "store_credit_account_transaction"
+									},
+									"defaultValue": "\"store_credit_account_transaction\""
+								},
+								{
+									"id": 68162,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "account-transaction.ts",
+											"line": 6,
+											"character": 51,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/account-transaction.ts#L6"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "AccountTransaction"
+									},
+									"defaultValue": "\"AccountTransaction\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										68161,
+										68162
+									]
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			}
+		},
+		{
+			"id": 68163,
+			"name": "StoreCreditAccount",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "store-credit-account.ts",
+					"line": 4,
+					"character": 0,
+					"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/store-credit-account.ts#L4"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@band-store/utils",
+					"packagePath": "src/dml/entity.ts",
+					"qualifiedName": "DmlEntity"
+				},
+				"typeArguments": [
+					{
+						"type": "reference",
+						"target": {
+							"packageName": "@band-store/utils",
+							"packagePath": "src/dml/entity.ts",
+							"qualifiedName": "DMLEntitySchemaBuilder"
+						},
+						"typeArguments": [
+							{
+								"type": "reflection",
+								"declaration": {
+									"id": 68164,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 68165,
+											"name": "id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "store-credit-account.ts",
+													"line": 8,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/store-credit-account.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/primary-key.ts",
+													"qualifiedName": "PrimaryKeyModifier"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "@band-store/utils",
+															"packagePath": "src/dml/properties/id.ts",
+															"qualifiedName": "IdProperty"
+														},
+														"name": "IdProperty",
+														"package": "@band-store/utils"
+													}
+												],
+												"name": "PrimaryKeyModifier",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68166,
+											"name": "code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "store-credit-account.ts",
+													"line": 9,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/store-credit-account.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68167,
+											"name": "currency_code",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "store-credit-account.ts",
+													"line": 10,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/store-credit-account.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68168,
+											"name": "customer_id",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "store-credit-account.ts",
+													"line": 11,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/store-credit-account.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/text.ts",
+													"qualifiedName": "TextProperty"
+												},
+												"name": "TextProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68169,
+											"name": "metadata",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "store-credit-account.ts",
+													"line": 12,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/store-credit-account.ts#L12"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/properties/json.ts",
+													"qualifiedName": "JSONProperty"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": {
+															"packageName": "typescript",
+															"packagePath": "lib/lib.es5.d.ts",
+															"qualifiedName": "NoInfer"
+														},
+														"typeArguments": [
+															{
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Record"
+																},
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "string"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "unknown"
+																	}
+																],
+																"name": "Record",
+																"package": "typescript"
+															}
+														],
+														"name": "NoInfer",
+														"package": "typescript"
+													}
+												],
+												"name": "JSONProperty",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										},
+										{
+											"id": 68170,
+											"name": "transactions",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "store-credit-account.ts",
+													"line": 14,
+													"character": 6,
+													"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/store-credit-account.ts#L14"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "@band-store/utils",
+													"packagePath": "src/dml/relations/has-many.ts",
+													"qualifiedName": "HasMany"
+												},
+												"typeArguments": [
+													{
+														"type": "reference",
+														"target": 68136,
+														"name": "AccountTransaction"
+													}
+												],
+												"name": "HasMany",
+												"package": "@band-store/utils"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												68165,
+												68166,
+												68167,
+												68168,
+												68169,
+												68170
+											]
+										}
+									]
+								}
+							}
+						],
+						"name": "DMLEntitySchemaBuilder",
+						"package": "@band-store/utils"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 68187,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 68188,
+									"name": "tableName",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "store-credit-account.ts",
+											"line": 6,
+											"character": 6,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/store-credit-account.ts#L6"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "store_credit_account"
+									},
+									"defaultValue": "\"store_credit_account\""
+								},
+								{
+									"id": 68189,
+									"name": "name",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isReadonly": true
+									},
+									"sources": [
+										{
+											"fileName": "store-credit-account.ts",
+											"line": 6,
+											"character": 41,
+											"url": "https://github.com/band-storejs/band-store/blob/81edb06c323812773c9c0dcc4da2d9784f3b3319/packages/plugins/loyalty/src/modules/store-credit/models/store-credit-account.ts#L6"
+										}
+									],
+									"type": {
+										"type": "literal",
+										"value": "StoreCreditAccount"
+									},
+									"defaultValue": "\"StoreCreditAccount\""
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										68188,
+										68189
+									]
+								}
+							]
+						}
+					}
+				],
+				"name": "DmlEntity",
+				"package": "@band-store/utils"
+			}
+		}
+	],
+	"groups": [
+		{
+			"title": "Variables",
+			"children": [
+				68136,
+				68163
+			]
+		}
+	],
+	"packageName": "@band-store/loyalty-plugin",
+	"symbolIdMap": {
+		"68135": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/index.ts",
+			"qualifiedName": ""
+		},
+		"68136": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "default"
+		},
+		"68137": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object"
+		},
+		"68138": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.id"
+		},
+		"68139": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.amount"
+		},
+		"68140": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.type"
+		},
+		"68141": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.reference"
+		},
+		"68142": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.reference_id"
+		},
+		"68143": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.note"
+		},
+		"68144": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.account"
+		},
+		"68145": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__function"
+		},
+		"68146": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__function"
+		},
+		"68147": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object"
+		},
+		"68148": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.id"
+		},
+		"68149": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.code"
+		},
+		"68150": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"68151": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.customer_id"
+		},
+		"68152": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"68153": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.transactions"
+		},
+		"68154": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__function"
+		},
+		"68155": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__function"
+		},
+		"68156": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object"
+		},
+		"68157": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"68158": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.name"
+		},
+		"68159": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"68160": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object"
+		},
+		"68161": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"68162": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.name"
+		},
+		"68163": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "default"
+		},
+		"68164": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object"
+		},
+		"68165": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.id"
+		},
+		"68166": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.code"
+		},
+		"68167": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.currency_code"
+		},
+		"68168": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.customer_id"
+		},
+		"68169": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"68170": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.transactions"
+		},
+		"68171": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__function"
+		},
+		"68172": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__function"
+		},
+		"68173": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object"
+		},
+		"68174": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.id"
+		},
+		"68175": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.amount"
+		},
+		"68176": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.type"
+		},
+		"68177": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.reference"
+		},
+		"68178": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.reference_id"
+		},
+		"68179": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.note"
+		},
+		"68180": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.account"
+		},
+		"68181": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__function"
+		},
+		"68182": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__function"
+		},
+		"68183": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.metadata"
+		},
+		"68184": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object"
+		},
+		"68185": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"68186": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/account-transaction.ts",
+			"qualifiedName": "__object.name"
+		},
+		"68187": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object"
+		},
+		"68188": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.tableName"
+		},
+		"68189": {
+			"packageName": "@band-store/loyalty-plugin",
+			"packagePath": "src/modules/store-credit/models/store-credit-account.ts",
+			"qualifiedName": "__object.name"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "../../../../packages/plugins/loyalty/src/modules/store-credit/models/index.ts"
+		},
+		"reflections": {
+			"1": 68135
+		}
+	}
+}

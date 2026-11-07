@@ -1,0 +1,68 @@
+export const metadata = {
+  title: `${pageNumber} Admin Development`,
+}
+
+# {metadata.title}
+
+In this chapter, you'll learn about the Band Store Admin dashboard and the possible ways to customize it.
+
+<Note title="Tip">
+
+To explore the Band Store Admin's commerce features, check out the [User Guide](!user-guide!). These user guides are designed for merchants and provide the steps to perform any task within the Band Store Admin.
+
+</Note>
+
+## What is the Band Store Admin?
+
+The Band Store Admin is an intuitive dashboard that allows merchants to manage their ecommerce store. It provides management features related to products, orders, customers, and more.
+
+The Band Store Admin is built with [Vite v7](https://v7.vite.dev/). When you [install the Band Store application](../../installation/page.mdx), you also install the Band Store Admin. Then, when you start the Band Store application, you can access the Band Store Admin at `http://localhost:9000/app`.
+
+<Note title="Tip">
+
+If you don't have an admin user, use the [Band Store CLI](!resources!/band-store-cli/commands/user) to create one.
+
+</Note>
+
+<Note>
+
+The Band Store Admin was migrated from Vite v5 to v7.3.6 and `react-router-dom` v6 to v7.18.2 in Band Store v2.19.0.
+
+As of that version, the Band Store Admin supports Chrome v107+, Edge v107+, Firefox v104+, and Safari v16+. If you need to support older browsers, change the `build.target` option in the [admin.vite configuration](../../configurations/band-store-config/page.mdx#vite).
+
+If your project installs `react-router-dom` directly, update it to v7. Learn more in the [Admin Routing Customizations](./routing/page.mdx) chapter.
+
+</Note>
+
+---
+
+## How to Customize the Band Store Admin?
+
+You can customize the Band Store Admin dashboard by:
+
+- Adding new sections to existing pages using [Widgets](./widgets/page.mdx).
+- Adding new pages using [UI Routes](./ui-routes/page.mdx).
+
+The next chapters will cover these two topics in detail.
+
+### What You Can't Customize in the Band Store Admin
+
+You can't customize the admin dashboard's layout, design, or the content of the existing pages (aside from injecting widgets). You also can't change the Band Store logo used in the admin dashboard.
+
+If your use case requires heavy customization of the admin dashboard, you can build a custom admin dashboard using Band Store's [Admin API routes](!api!/admin).
+
+---
+
+## Band Store UI Package
+
+Band Store provides a Band Store UI package to facilitate your admin development through ready-made components and ensure a consistent design between your customizations and the dashboard’s design.
+
+Refer to the Band Store UI documentation to learn how to install it and use its components.
+
+---
+
+## Admin How-to Guides
+
+The [Admin How-to Guides](!resources!/how-to-tutorials#admin) provides guides that walk you through common admin customizations, such as [building common admin components](!resources!/admin-components), or [adding third-party authentication to the admin](!resources!/how-to-tutorials/how-to/admin/auth).
+
+Refer to these guides for practical examples of customizing the Band Store Admin dashboard.

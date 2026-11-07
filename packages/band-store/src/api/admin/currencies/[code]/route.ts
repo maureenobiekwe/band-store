@@ -1,0 +1,32 @@
+import {
+  ContainerRegistrationKeys,
+  BandStoreError,
+  remoteQueryObjectFromString,
+} from "@band-store/framework/utils"
+import { BandStoreRequest, BandStoreResponse } from "@band-store/framework/http"
+import { HttpTypes } from "@band-store/framework/types"
+
+export const GET = async (
+  req: BandStoreRequest<HttpTypes.AdminCurrencyParams>,
+  res: BandStoreResponse<HttpTypes.AdminCurrencyResponse>
+) => {
+  const remoteQuery = req.scope.resolve(ContainerRegistrationKeys.REMOTE_QUERY)
+
+  const variables = { filters: { code: req.params.code } }
+
+  const queryObject = remoteQueryObjectFromString({
+    entryPoint: "currency",
+    variables,
+    fields: req.queryConfig.fields,
+  })
+
+  const [currency] = await remoteQuery(queryObject)
+  if (!currency) {
+    throw new BandStoreError(
+      BandStoreError.Types.NOT_FOUND,
+      `Currency with code: ${req.params.code} was not found`
+    )
+  }
+
+  res.status(200).json({ currency })
+}
